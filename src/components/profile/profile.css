@@ -1,0 +1,134 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.profile h1 samp {
+    background: linear-gradient(25deg, #2b5061 5%, #FC6E3B 40%, #f1a057 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile p {
+    font-size: 1rem;
+    margin: 20px 0;
+    line-height: 1.5;
+    width: 70%;
+}
+
+.profile-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Connect button */
+.connect-button {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(25deg, #2b5061 5%, #FC6E3B 40%, #f1a057 100%);
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: 0.5s;
+    border: none;
+}
+
+.connect-button:hover,
+.connect-button:active {
+    transform: scale(1.05);
+}
+
+/* Download button */
+.download-button-wrapper {
+    display: inline-flex;
+    padding: 2px;
+    border-radius: 8px;
+    background: linear-gradient(25deg, #2b5061 10%, #FC6E3B 50%, #f1a057 100%);
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+}
+
+.download-button-wrapper:hover,
+.download-button-wrapper:active {
+    transform: scale(1.05);
+}
+
+.download-button {
+    background: #161513;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.download-button:active {
+    transform: scale(1.05);
+}
+
+.download-button span {
+    background: linear-gradient(25deg, #2b5061 5%, #FC6E3B 40%, #f1a057 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .profile {
+        padding-top: 50px;
+    }
+
+    .profile h1 {
+        font-size: 1.6rem;
+        padding-left: 40px;
+    }
+
+    .profile p {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0 20px;
+        text-align: justify;
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .connect-button,
+    .download-button {
+        width: 100%;
+        max-width: 250px;
+    }
+}

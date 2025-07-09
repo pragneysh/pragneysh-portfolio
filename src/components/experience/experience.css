@@ -1,0 +1,108 @@
+.experiences{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.experiences-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .experiences-content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .experiences-content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.experience{
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    border: 2px solid #2b5061;
+    text-align: left;
+}
+
+.experience:hover{
+    transform: translateY(-5px);
+    transform: scale(1.05);
+}
+
+.experience-company{
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.experience-company h3{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.experience h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.experience button{
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    background:linear-gradient(25deg, #2b5061 5%, #FC6E3B 40%, #f1a057 100%) ;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: 0.5s;
+    border: none;
+}
+
+.experience button:hover{
+    transform: translateY(-5px);
+    transform: scale(1.05);
+}
+
+.experience button i{
+    margin-left: 10px;
+}
+
+@media (max-width: 480px) {
+    .experience{
+        margin: 0 20px;
+    }
+
+    .experience:hover{
+        transform: translateY(-5px);
+        transform: scale(1.05);
+    }
+
+    .experience h3{
+        font-size: 1rem;
+    }
+
+    .experience h2{
+        font-size: 1.2rem;
+    }
+
+    .experience button{
+        padding: 8px 16px;
+    }
+
+    .experience button i{
+        margin-left: 5px;
+    }
+}
