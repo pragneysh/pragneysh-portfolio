@@ -1,3 +1,4 @@
+
 import React from 'react'
 import profile_img from '../../assets/Pragneysh.png'
 import CV from '../../assets/Pragneysh_CV.pdf'
@@ -9,7 +10,7 @@ const Profile = () => {
   return (
     <div className="profile" id='home'>
         <img src={profile_img} alt="Pragneysh Dekate" />
-        <h1><samp>I'm Pragneysh Dekate,</samp> Full Stack Developer</h1>
+        <h1><samp>I'm Pragneysh Dekate,</samp> <br className='sm-block d-none' /> Full Stack Developer</h1>
         <p>
             I'm a Full Stack Developer with a passion for creating beautiful and functional websites. I have a strong background in web development and a deep understanding of the latest technologies.
         </p>

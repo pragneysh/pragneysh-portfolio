@@ -140,6 +140,10 @@
         gap: 40px;
     }
 
+    .about-left{
+        display: none;
+    }
+
     .about-left img {
         width: 200px;
     }

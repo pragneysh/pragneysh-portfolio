@@ -98,6 +98,10 @@
     transition: 0.5s;
 }
 
+.d-none{
+    display: none;
+}
+
 /* ✅ Responsive */
 @media (max-width: 768px) {
     .profile {
@@ -106,7 +110,11 @@
 
     .profile h1 {
         font-size: 1.6rem;
-        padding-left: 40px;
+        padding: 0 20px;
+    }
+
+    .sm-block{
+        display: block;
     }
 
     .profile p {
