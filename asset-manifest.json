@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/pragneysh-portfolio/static/css/main.15fec07e.css",
+    "main.js": "/pragneysh-portfolio/static/js/main.368ee531.js",
+    "static/js/453.ad7768ec.chunk.js": "/pragneysh-portfolio/static/js/453.ad7768ec.chunk.js",
+    "static/media/project_2.svg": "/pragneysh-portfolio/static/media/project_2.b5880b508aea26982f2b8faf5d6c712a.svg",
+    "static/media/project_3.svg": "/pragneysh-portfolio/static/media/project_3.9ec4cb62fdebbbba2fb198c009489c36.svg",
+    "static/media/project_1.svg": "/pragneysh-portfolio/static/media/project_1.88651517c115211688c975a8c28c5c1e.svg",
+    "static/media/project_6.svg": "/pragneysh-portfolio/static/media/project_6.ae58a0ffd26a1a5212e3b0dba91e6f75.svg",
+    "static/media/project_5.svg": "/pragneysh-portfolio/static/media/project_5.e7af3c379f6eb8033b97478806a7a930.svg",
+    "static/media/project_4.svg": "/pragneysh-portfolio/static/media/project_4.5a9c437eafb090ed2c7efe1317c551fb.svg",
+    "static/media/Pragneysh.png": "/pragneysh-portfolio/static/media/Pragneysh.5ee767b331157884d3a9.png",
+    "static/media/Pragneysh_CV.pdf": "/pragneysh-portfolio/static/media/Pragneysh_CV.9ababfbb67745122cbb5.pdf",
+    "static/media/react.png": "/pragneysh-portfolio/static/media/react.689fb9f7566ea095cd42.png",
+    "static/media/call_icon.svg": "/pragneysh-portfolio/static/media/call_icon.fec62cc3d3fb69f5ce5f05a0724a0425.svg",
+    "static/media/mail_icon.svg": "/pragneysh-portfolio/static/media/mail_icon.9eae5516c8c1364a170e8b13ae4c18cf.svg",
+    "index.html": "/pragneysh-portfolio/index.html",
+    "static/media/location_icon.svg": "/pragneysh-portfolio/static/media/location_icon.111157f177e78ee2c0025016c0206379.svg",
+    "main.15fec07e.css.map": "/pragneysh-portfolio/static/css/main.15fec07e.css.map",
+    "main.368ee531.js.map": "/pragneysh-portfolio/static/js/main.368ee531.js.map",
+    "453.ad7768ec.chunk.js.map": "/pragneysh-portfolio/static/js/453.ad7768ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15fec07e.css",
+    "static/js/main.368ee531.js"
+  ]
+}
