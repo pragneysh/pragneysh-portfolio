@@ -28,7 +28,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Install jq
-        run: sudo apt-get install -y jq
+        run: sudo apt-get update && sudo apt-get install -y jq
 
       # ── S3 ─────────────────────────────
       - name: Ensure S3 bucket exists
@@ -50,46 +50,59 @@ jobs:
       - name: Create or Get CloudFront Distribution
         id: cf
         run: |
+          set -e
+
           EXISTING_ID=$(aws cloudfront list-distributions \
             --query "DistributionList.Items[?contains(Origins.Items[0].DomainName, '${{ env.S3_BUCKET }}')].Id" \
             --output text)
 
           if [ "$EXISTING_ID" != "None" ] && [ -n "$EXISTING_ID" ]; then
             echo "✅ CloudFront exists: $EXISTING_ID"
-            DOMAIN=$(aws cloudfront get-distribution --id $EXISTING_ID \
+
+            ID=$EXISTING_ID
+            DOMAIN=$(aws cloudfront get-distribution --id $ID \
               --query "Distribution.DomainName" --output text)
+
           else
             echo "🚀 Creating CloudFront..."
 
             DIST_JSON=$(cat <<EOF
-            {
-              "CallerReference": "$(date +%s)",
-              "Origins": {
-                "Quantity": 1,
-                "Items": [
-                  {
-                    "Id": "S3Origin",
-                    "DomainName": "${{ env.S3_BUCKET }}.s3.amazonaws.com",
-                    "S3OriginConfig": {
-                      "OriginAccessIdentity": ""
-                    }
-                  }
-                ]
-              },
-              "DefaultCacheBehavior": {
-                "TargetOriginId": "S3Origin",
-                "ViewerProtocolPolicy": "redirect-to-https",
-                "AllowedMethods": {
-                  "Quantity": 2,
-                  "Items": ["GET", "HEAD"]
-                },
-                "ForwardedValues": {
-                  "QueryString": false,
-                  "Cookies": { "Forward": "none" }
-                }
-              },
-              "Enabled": true
-            }
+{
+  "CallerReference": "$(date +%s)",
+  "Comment": "Portfolio CDN",
+  "DefaultRootObject": "index.html",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3Origin",
+        "DomainName": "${{ env.S3_BUCKET }}.s3.amazonaws.com",
+        "S3OriginConfig": {
+          "OriginAccessIdentity": ""
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3Origin",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 2,
+      "Items": ["GET", "HEAD"]
+    },
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": {
+        "Forward": "none"
+      }
+    },
+    "MinTTL": 0
+  },
+  "ViewerCertificate": {
+    "CloudFrontDefaultCertificate": true
+  },
+  "Enabled": true
+}
 EOF
             )
 
@@ -103,7 +116,7 @@ EOF
           echo "id=$ID" >> $GITHUB_OUTPUT
           echo "domain=$DOMAIN" >> $GITHUB_OUTPUT
 
-          echo "🌐 CloudFront Domain: https://$DOMAIN"
+          echo "🌐 CloudFront URL: https://$DOMAIN"
 
   deploy:
     name: Build & Deploy
