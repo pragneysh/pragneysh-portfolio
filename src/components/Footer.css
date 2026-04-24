@@ -1,0 +1,18 @@
+.footer {
+  padding: 1.75rem 4rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+}
+.footer-left { font-size: 0.72rem; color: var(--muted); }
+.footer-left strong { color: var(--text); font-weight: 500; }
+.footer-center a {
+  font-size: 0.72rem; color: var(--muted);
+  transition: color 0.2s;
+}
+.footer-center a:hover { color: var(--accent); }
+.footer-right { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.06em; }
+@media (max-width: 700px) {
+  .footer { flex-direction: column; text-align: center; padding: 1.5rem; }
+}

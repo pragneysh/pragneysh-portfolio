@@ -1,0 +1,149 @@
+name: Build & Deploy Portfolio to S3
+
+on:
+  push:
+    branches:
+      - main        # triggers on every push to main
+  workflow_dispatch: # allows manual trigger from GitHub UI
+
+env:
+  AWS_REGION:      ap-south-1
+  S3_BUCKET:       pragneysh-portfolio
+  CLOUDFRONT_ID:   ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}   # optional — leave blank if no CF
+
+jobs:
+  # ─────────────────────────────────────────────
+  # JOB 1 — Create S3 bucket if it doesn't exist
+  # ─────────────────────────────────────────────
+  provision:
+    name: Provision S3 Bucket
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region:            ${{ env.AWS_REGION }}
+
+      - name: Create S3 bucket (skip if exists)
+        run: |
+          if aws s3api head-bucket --bucket ${{ env.S3_BUCKET }} 2>/dev/null; then
+            echo "✅ Bucket already exists — skipping creation"
+          else
+            echo "🪣 Creating bucket: ${{ env.S3_BUCKET }}"
+            aws s3 mb s3://${{ env.S3_BUCKET }} --region ${{ env.AWS_REGION }}
+            echo "✅ Bucket created"
+          fi
+
+      - name: Disable Block Public Access
+        run: |
+          aws s3api put-public-access-block \
+            --bucket ${{ env.S3_BUCKET }} \
+            --public-access-block-configuration \
+              "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
+          echo "✅ Public access unblocked"
+
+      - name: Apply bucket policy (public read)
+        run: |
+          aws s3api put-bucket-policy \
+            --bucket ${{ env.S3_BUCKET }} \
+            --policy '{
+              "Version": "2012-10-17",
+              "Statement": [{
+                "Sid": "PublicReadGetObject",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::${{ env.S3_BUCKET }}/*"
+              }]
+            }'
+          echo "✅ Bucket policy applied"
+
+      - name: Enable static website hosting
+        run: |
+          aws s3 website s3://${{ env.S3_BUCKET }} \
+            --index-document index.html \
+            --error-document index.html
+          echo "✅ Static website hosting enabled"
+          echo "🌐 URL: http://${{ env.S3_BUCKET }}.s3-website.${{ env.AWS_REGION }}.amazonaws.com"
+
+  # ─────────────────────────────────────────────
+  # JOB 2 — Build React app & deploy to S3
+  # ─────────────────────────────────────────────
+  build-and-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    needs: provision       # runs only after bucket is ready
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Verify dist output
+        run: |
+          echo "📦 Build output:"
+          ls -lh dist/
+          echo "📄 index.html size: $(du -sh dist/index.html | cut -f1)"
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region:            ${{ env.AWS_REGION }}
+
+      - name: Deploy to S3
+        run: |
+          echo "🚀 Deploying to s3://${{ env.S3_BUCKET }}"
+
+          # Upload assets with long cache (1 year) — hashed filenames change on rebuild
+          aws s3 sync dist/assets s3://${{ env.S3_BUCKET }}/assets \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --metadata-directive REPLACE
+
+          # Upload HTML / root files with no cache — always fresh
+          aws s3 sync dist/ s3://${{ env.S3_BUCKET }} \
+            --delete \
+            --exclude "assets/*" \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --metadata-directive REPLACE
+
+          echo "✅ Deployment complete"
+
+      - name: Invalidate CloudFront cache (if configured)
+        if: ${{ env.CLOUDFRONT_ID != '' }}
+        run: |
+          echo "⚡ Invalidating CloudFront distribution: ${{ env.CLOUDFRONT_ID }}"
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ env.CLOUDFRONT_ID }} \
+            --paths "/*"
+          echo "✅ Cache invalidation triggered"
+
+      - name: Print live URL
+        run: |
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🌐 S3 URL:"
+          echo "   http://${{ env.S3_BUCKET }}.s3-website.${{ env.AWS_REGION }}.amazonaws.com"
+          echo ""
+          if [ -n "${{ env.CLOUDFRONT_ID }}" ]; then
+            echo "⚡ CloudFront cache invalidation was triggered"
+          fi
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

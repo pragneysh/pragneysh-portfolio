@@ -1,0 +1,81 @@
+.projects-section { background: var(--bg); border-top: 1px solid var(--border); }
+
+.reveal-proj {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal-proj.visible { opacity: 1; transform: translateY(0); }
+
+.proj-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 2rem;
+  position: relative; overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.proj-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  opacity: 0; transition: opacity var(--transition);
+}
+.proj-card:hover { border-color: var(--border-hi); transform: translateY(-4px); }
+.proj-card:hover::before { opacity: 1; }
+
+.proj-featured {
+  display: grid; grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem; margin-bottom: 1.25rem;
+}
+.projects-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.proj-num {
+  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 0.75rem;
+}
+.proj-title {
+  font-family: var(--font-head); font-size: 1.1rem;
+  font-weight: 700; color: var(--white);
+  margin-bottom: 0.75rem; letter-spacing: -0.01em;
+}
+.proj-desc {
+  font-size: 0.8rem; color: var(--muted);
+  line-height: 1.85; margin-bottom: 1.25rem;
+}
+.proj-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.stack-tag {
+  font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  background: rgba(91,143,255,0.07);
+  border: 1px solid rgba(91,143,255,0.2);
+  border-radius: 3px; color: var(--accent);
+}
+.stack-tag.green {
+  background: rgba(61,255,192,0.06);
+  border-color: rgba(61,255,192,0.2);
+  color: var(--accent2);
+}
+
+/* Architecture diagram */
+.arch-diagram {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.25rem;
+  display: flex; flex-direction: column; gap: 0;
+}
+.arch-label {
+  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 1rem;
+}
+.arch-layer {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.55rem 0.85rem; border-radius: 5px;
+  font-size: 0.75rem; color: var(--muted);
+}
+.arch-arrow {
+  text-align: center; font-size: 0.65rem;
+  color: var(--border-hi); padding: 0.15rem 0;
+}
+
+@media (max-width: 900px) {
+  .proj-featured { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
