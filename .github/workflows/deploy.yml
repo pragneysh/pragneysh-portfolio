@@ -11,9 +11,6 @@ env:
   S3_BUCKET: pragneysh-portfolio
 
 jobs:
-  # ─────────────────────────────────────────────
-  # JOB 1 — Provision S3 + CloudFront
-  # ─────────────────────────────────────────────
   provision:
     name: Provision Infrastructure
     runs-on: ubuntu-latest
@@ -30,7 +27,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      # ── S3 BUCKET ─────────────────────────────
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      # ── S3 ─────────────────────────────
       - name: Ensure S3 bucket exists
         run: |
           if aws s3api head-bucket --bucket ${{ env.S3_BUCKET }} 2>/dev/null; then
@@ -46,23 +46,20 @@ jobs:
             --index-document index.html \
             --error-document index.html
 
-      # ── CLOUDFRONT ───────────────────────────
-      - name: Create CloudFront Distribution (if not exists)
+      # ── CLOUDFRONT ─────────────────────
+      - name: Create or Get CloudFront Distribution
         id: cf
         run: |
           EXISTING_ID=$(aws cloudfront list-distributions \
-            --query "DistributionList.Items[?Origins.Items[0].DomainName=='${{ env.S3_BUCKET }}.s3.amazonaws.com'].Id" \
+            --query "DistributionList.Items[?contains(Origins.Items[0].DomainName, '${{ env.S3_BUCKET }}')].Id" \
             --output text)
 
           if [ "$EXISTING_ID" != "None" ] && [ -n "$EXISTING_ID" ]; then
-            echo "CloudFront exists: $EXISTING_ID"
+            echo "✅ CloudFront exists: $EXISTING_ID"
             DOMAIN=$(aws cloudfront get-distribution --id $EXISTING_ID \
               --query "Distribution.DomainName" --output text)
-
-            echo "id=$EXISTING_ID" >> $GITHUB_OUTPUT
-            echo "domain=$DOMAIN" >> $GITHUB_OUTPUT
           else
-            echo "Creating CloudFront..."
+            echo "🚀 Creating CloudFront..."
 
             DIST_JSON=$(cat <<EOF
             {
@@ -99,16 +96,15 @@ EOF
             RESULT=$(aws cloudfront create-distribution \
               --distribution-config "$DIST_JSON")
 
-            ID=$(echo $RESULT | jq -r '.Distribution.Id')
-            DOMAIN=$(echo $RESULT | jq -r '.Distribution.DomainName')
-
-            echo "id=$ID" >> $GITHUB_OUTPUT
-            echo "domain=$DOMAIN" >> $GITHUB_OUTPUT
+            ID=$(echo "$RESULT" | jq -r '.Distribution.Id')
+            DOMAIN=$(echo "$RESULT" | jq -r '.Distribution.DomainName')
           fi
 
-  # ─────────────────────────────────────────────
-  # JOB 2 — Build & Deploy
-  # ─────────────────────────────────────────────
+          echo "id=$ID" >> $GITHUB_OUTPUT
+          echo "domain=$DOMAIN" >> $GITHUB_OUTPUT
+
+          echo "🌐 CloudFront Domain: https://$DOMAIN"
+
   deploy:
     name: Build & Deploy
     runs-on: ubuntu-latest
@@ -155,6 +151,6 @@ EOF
           echo "🌐 Secure URL (HTTPS):"
           echo "https://${{ needs.provision.outputs.cf_domain }}"
           echo ""
-          echo "⚠️ S3 URL (Not Secure):"
+          echo "⚠️ S3 URL:"
           echo "http://${{ env.S3_BUCKET }}.s3-website.${{ env.AWS_REGION }}.amazonaws.com"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
