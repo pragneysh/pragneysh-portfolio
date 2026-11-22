@@ -1,0 +1,87 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" rx="16" fill="#0D1117"/>
+  <defs>
+    <linearGradient id="authGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#121D24"/>
+      <stop offset="100%" stop-color="#0A1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#authGrad)"/>
+  <rect x="1" y="1" width="798" height="448" rx="15" stroke="#253842" stroke-width="1.5"/>
+  
+  <!-- Header Bar -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H784C792.837 0 800 7.16344 800 16V48H0V16Z" fill="#15242C"/>
+  <circle cx="28" cy="24" r="6" fill="#FF5F56"/>
+  <circle cx="48" cy="24" r="6" fill="#FFBD2E"/>
+  <circle cx="68" cy="24" r="6" fill="#27C93F"/>
+  <text x="100" y="29" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="13" font-weight="500">Authentication &amp; Security Systems — Enterprise Identity &amp; Auth Framework</text>
+  <rect x="670" y="14" width="105" height="20" rx="10" fill="#10B981" fill-opacity="0.2"/>
+  <text x="690" y="28" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="600">SECURITY</text>
+
+  <!-- Left Main Panel -->
+  <rect x="36" y="68" width="470" height="346" rx="12" fill="#0E1A20" stroke="#253842"/>
+  <text x="56" y="100" fill="#F0FDF4" font-family="Manrope, sans-serif" font-size="17" font-weight="700">Multi-Factor Authentication &amp; Token Lifecycle</text>
+  <text x="56" y="122" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="12">TOTP authentication, asymmetric JWT token rotation &amp; role permission matrices</text>
+
+  <!-- Flow 1 -->
+  <rect x="56" y="142" width="430" height="48" rx="8" fill="#14232C" stroke="#253842"/>
+  <circle cx="78" cy="166" r="10" fill="#10B981" fill-opacity="0.25"/>
+  <text x="74" y="170" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="700">1</text>
+  <text x="98" y="161" fill="#ECFDF5" font-family="Inter, sans-serif" font-size="12" font-weight="600">Multi-Factor Verification (TOTP &amp; Backup Keys)</text>
+  <text x="98" y="178" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="11">Time-based one-time password challenge and one-time emergency backup keys</text>
+
+  <!-- Flow 2 -->
+  <rect x="56" y="200" width="430" height="48" rx="8" fill="#14232C" stroke="#253842"/>
+  <circle cx="78" cy="224" r="10" fill="#3B82F6" fill-opacity="0.25"/>
+  <text x="74" y="228" fill="#60A5FA" font-family="Inter, sans-serif" font-size="11" font-weight="700">2</text>
+  <text x="98" y="219" fill="#ECFDF5" font-family="Inter, sans-serif" font-size="12" font-weight="600">JWT Token Security &amp; Rotation Lifecycle</text>
+  <text x="98" y="236" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="11">Short-lived access tokens with automatic cryptographic refresh token rotation</text>
+
+  <!-- Flow 3 -->
+  <rect x="56" y="258" width="430" height="48" rx="8" fill="#14232C" stroke="#253842"/>
+  <circle cx="78" cy="282" r="10" fill="#F59E0B" fill-opacity="0.25"/>
+  <text x="74" y="286" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="700">3</text>
+  <text x="98" y="277" fill="#ECFDF5" font-family="Inter, sans-serif" font-size="12" font-weight="600">Role-Based Access Control (RBAC) &amp; Rate Limits</text>
+  <text x="98" y="294" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="11">Granular role permission matrix with IP brute-force rate-limiting defenses</text>
+
+  <!-- Security Audit Strip -->
+  <rect x="56" y="318" width="430" height="78" rx="8" fill="#14232C" stroke="#059669" stroke-width="1.2"/>
+  <text x="72" y="342" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="700">DEFENSE-IN-DEPTH SECURITY STANDARD</text>
+  <text x="72" y="362" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="11">• OWASP Top 10 mitigation: CSRF protection, SQL injection prevention, strict CORS</text>
+  <text x="72" y="380" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="11">• Tamper-evident audit logging for failed login attempts and privilege escalation</text>
+
+  <!-- Right Panel -->
+  <rect x="522" y="68" width="242" height="346" rx="12" fill="#0E1A20" stroke="#253842"/>
+  <text x="542" y="100" fill="#F0FDF4" font-family="Manrope, sans-serif" font-size="15" font-weight="700">Security Tech Stack</text>
+
+  <g transform="translate(542, 116)">
+    <rect width="100" height="28" rx="6" fill="#14232C" stroke="#253842"/>
+    <text x="14" y="18" fill="#60A5FA" font-family="Inter, sans-serif" font-size="11" font-weight="600">Python 3.10</text>
+
+    <rect x="110" width="92" height="28" rx="6" fill="#14232C" stroke="#253842"/>
+    <text x="122" y="18" fill="#60A5FA" font-family="Inter, sans-serif" font-size="11" font-weight="600">Django</text>
+
+    <rect y="36" width="100" height="28" rx="6" fill="#14232C" stroke="#253842"/>
+    <text x="8" y="54" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="600">django-allauth</text>
+
+    <rect x="110" y="36" width="92" height="28" rx="6" fill="#14232C" stroke="#253842"/>
+    <text x="128" y="54" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="600">JWT</text>
+
+    <rect y="72" width="100" height="28" rx="6" fill="#14232C" stroke="#253842"/>
+    <text x="10" y="90" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="600">TOTP / MFA</text>
+
+    <rect x="110" y="72" width="92" height="28" rx="6" fill="#14232C" stroke="#253842"/>
+    <text x="122" y="90" fill="#C4B5FD" font-family="Inter, sans-serif" font-size="11" font-weight="600">OAuth 2.0</text>
+  </g>
+
+  <!-- Right Metrics Card -->
+  <rect x="542" y="240" width="202" height="156" rx="8" fill="#14232C" stroke="#253842"/>
+  <text x="558" y="266" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="11">Security Framework:</text>
+  <text x="558" y="284" fill="#F0FDF4" font-family="Manrope, sans-serif" font-size="13" font-weight="700">Identity &amp; Auth</text>
+
+  <text x="558" y="312" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="11">Challenge Type:</text>
+  <text x="558" y="330" fill="#34D399" font-family="Manrope, sans-serif" font-size="13" font-weight="700">MFA &amp; TOTP 2-Step</text>
+
+  <text x="558" y="358" fill="#8BA4B0" font-family="Inter, sans-serif" font-size="11">Compliance Standard:</text>
+  <text x="558" y="376" fill="#60A5FA" font-family="Manrope, sans-serif" font-size="13" font-weight="700">OWASP Hardened</text>
+</svg>

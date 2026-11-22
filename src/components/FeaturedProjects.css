@@ -1,0 +1,245 @@
+/* ========================================================
+   FEATURED PROJECTS SECTION STYLES
+   Curated 3-Project Flagship Showcase
+   ======================================================== */
+
+.featured-projects-section {
+  padding: 4.5rem 1.75rem 4rem;
+  background: var(--bg);
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 80px;
+}
+
+/* ── 3-Card Curated Showcase Grid ── */
+.featured-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Showcase Card ── */
+.featured-showcase-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+}
+
+.featured-showcase-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 28px -10px rgba(37, 99, 235, 0.18),
+    0 0 0 1px var(--accent-glow);
+}
+
+/* ── Media Wrapper (Strict 16:9) ── */
+.featured-showcase-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #060913;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.featured-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featured-showcase-card:hover .featured-showcase-img {
+  transform: scale(1.035);
+}
+
+.featured-showcase-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 10, 20, 0) 65%, rgba(6, 10, 20, 0.35) 100%);
+  pointer-events: none;
+}
+
+.featured-showcase-badge {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.85rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.22rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background: rgba(10, 15, 29, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #93c5fd;
+  letter-spacing: 0.03em;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Card Body ── */
+.featured-showcase-body {
+  padding: 1.25rem 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.featured-showcase-title {
+  font-family: var(--font-head);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.showcase-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.showcase-title-link:hover {
+  color: var(--accent);
+}
+
+.featured-showcase-sentence {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* ── Card Footer & CTA ── */
+.featured-showcase-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border);
+}
+
+.featured-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.featured-showcase-card:hover .featured-explore-btn {
+  color: var(--text);
+  gap: 0.6rem;
+}
+
+/* ── Section Bottom CTA -> Navigate to Complete Catalogue ── */
+.featured-showcase-cta-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.featured-all-projects-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.featured-all-projects-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg-hover, var(--bg-card));
+  box-shadow: 0 6px 18px var(--accent-glow);
+  gap: 0.75rem;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive Breakpoints ── */
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .featured-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+    margin-bottom: 2rem;
+  }
+
+  .featured-showcase-grid > article:last-child {
+    grid-column: span 2;
+    max-width: 500px;
+    justify-self: center;
+    width: 100%;
+  }
+
+  .featured-projects-section {
+    padding: 4rem 1.5rem 3.5rem;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 640px) {
+  .featured-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .featured-showcase-grid > article:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .featured-projects-section {
+    padding: 3.5rem 1.15rem 3rem;
+  }
+
+  .featured-showcase-body {
+    padding: 1.1rem 1.1rem 1.25rem;
+  }
+
+  .featured-showcase-title {
+    font-size: 1.05rem;
+  }
+
+  .featured-showcase-sentence {
+    font-size: 0.825rem;
+  }
+
+  .featured-all-projects-link {
+    width: 100%;
+    justify-content: center;
+  }
+}

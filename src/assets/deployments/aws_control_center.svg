@@ -1,0 +1,101 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" rx="16" fill="#0D1117"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0B0E14"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4169E1"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="798" height="448" rx="15" stroke="#30363D" stroke-width="2"/>
+  
+  <!-- Header bar -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H784C792.837 0 800 7.16344 800 16V48H0V16Z" fill="#161B22"/>
+  <circle cx="28" cy="24" r="6" fill="#FF5F56"/>
+  <circle cx="48" cy="24" r="6" fill="#FFBD2E"/>
+  <circle cx="68" cy="24" r="6" fill="#27C93F"/>
+  <text x="100" y="29" fill="#8B949E" font-family="Inter, sans-serif" font-size="13" font-weight="500">AWS Multi-Region Infrastructure &amp; Disaster Recovery Control Center</text>
+  <rect x="670" y="14" width="105" height="20" rx="10" fill="#238636" fill-opacity="0.2"/>
+  <text x="686" y="28" fill="#3FB950" font-family="Inter, sans-serif" font-size="11" font-weight="600">AUDIT VERIFIED</text>
+  
+  <!-- Grid Matrix -->
+  <g opacity="0.1" stroke="#4169E1" stroke-width="1">
+    <path d="M40 90H760 M40 160H760 M40 230H760 M40 300H760 M40 370H760"/>
+    <path d="M160 60V420 M280 60V420 M400 60V420 M520 60V420 M640 60V420"/>
+  </g>
+
+  <!-- Metric Badges -->
+  <!-- Card 1 -->
+  <rect x="40" y="70" width="165" height="95" rx="10" fill="#161B22" stroke="#30363D"/>
+  <text x="56" y="100" fill="#8B949E" font-family="Inter, sans-serif" font-size="12">Regions Scanned</text>
+  <text x="56" y="138" fill="#58A6FF" font-family="Manrope, sans-serif" font-size="32" font-weight="800">17</text>
+  <text x="96" y="136" fill="#8B949E" font-family="Inter, sans-serif" font-size="11">Global AWS</text>
+
+  <!-- Card 2 -->
+  <rect x="225" y="70" width="165" height="95" rx="10" fill="#161B22" stroke="#30363D"/>
+  <text x="241" y="100" fill="#8B949E" font-family="Inter, sans-serif" font-size="12">S3 Cloud Buckets</text>
+  <text x="241" y="138" fill="#3FB950" font-family="Manrope, sans-serif" font-size="32" font-weight="800">23</text>
+  <text x="288" y="136" fill="#8B949E" font-family="Inter, sans-serif" font-size="11">Encrypted</text>
+
+  <!-- Card 3 -->
+  <rect x="410" y="70" width="165" height="95" rx="10" fill="#161B22" stroke="#30363D"/>
+  <text x="426" y="100" fill="#8B949E" font-family="Inter, sans-serif" font-size="12">Lambda Microservices</text>
+  <text x="426" y="138" fill="#F0883E" font-family="Manrope, sans-serif" font-size="32" font-weight="800">33</text>
+  <text x="473" y="136" fill="#8B949E" font-family="Inter, sans-serif" font-size="11">Functions</text>
+
+  <!-- Card 4 -->
+  <rect x="595" y="70" width="165" height="95" rx="10" fill="#161B22" stroke="#30363D"/>
+  <text x="611" y="100" fill="#8B949E" font-family="Inter, sans-serif" font-size="12">DynamoDB Tables</text>
+  <text x="611" y="138" fill="#BC8CFF" font-family="Manrope, sans-serif" font-size="32" font-weight="800">28</text>
+  <text x="658" y="136" fill="#8B949E" font-family="Inter, sans-serif" font-size="11">NoSQL</text>
+
+  <!-- Topology Display -->
+  <rect x="40" y="185" width="450" height="230" rx="12" fill="#13171F" stroke="#30363D"/>
+  <text x="60" y="215" fill="#C9D1D9" font-family="Manrope, sans-serif" font-size="14" font-weight="700">Multi-Account &amp; Workload Topology</text>
+  
+  <rect x="60" y="235" width="115" height="50" rx="8" fill="#1F242C" stroke="#4169E1"/>
+  <text x="72" y="256" fill="#58A6FF" font-family="Inter, sans-serif" font-size="11" font-weight="600">8 Workloads</text>
+  <text x="72" y="272" fill="#8B949E" font-family="Inter, sans-serif" font-size="10">Active Stacks</text>
+
+  <rect x="200" y="235" width="135" height="50" rx="8" fill="#1F242C" stroke="#30363D"/>
+  <text x="212" y="256" fill="#C9D1D9" font-family="Inter, sans-serif" font-size="11" font-weight="600">116 API Routes</text>
+  <text x="212" y="272" fill="#8B949E" font-family="Inter, sans-serif" font-size="10">API Gateway v2</text>
+
+  <rect x="360" y="235" width="115" height="50" rx="8" fill="#1F242C" stroke="#30363D"/>
+  <text x="372" y="256" fill="#C9D1D9" font-family="Inter, sans-serif" font-size="11" font-weight="600">641 Backups</text>
+  <text x="372" y="272" fill="#8B949E" font-family="Inter, sans-serif" font-size="10">Automated</text>
+
+  <rect x="60" y="305" width="415" height="92" rx="8" fill="#161B22" stroke="#238636" stroke-width="1.5"/>
+  <text x="76" y="330" fill="#3FB950" font-family="Inter, sans-serif" font-size="12" font-weight="700">4-Tier Disaster Recovery Standard</text>
+  <text x="76" y="352" fill="#8B949E" font-family="Inter, sans-serif" font-size="11">Tier 1: S3 Cross-Region Versioning · Tier 2: DynamoDB PITR Backups</text>
+  <text x="76" y="372" fill="#8B949E" font-family="Inter, sans-serif" font-size="11">Tier 3: IaC CloudFormation Templates · Tier 4: Cold Account Snapshot</text>
+  <text x="76" y="388" fill="#D29922" font-family="Inter, sans-serif" font-size="10" font-style="italic">* Physical secondary-account DR restore test scheduled / pending</text>
+
+  <!-- Verification Stats Column -->
+  <rect x="510" y="185" width="250" height="230" rx="12" fill="#13171F" stroke="#30363D"/>
+  <text x="530" y="215" fill="#C9D1D9" font-family="Manrope, sans-serif" font-size="14" font-weight="700">Audit Verification</text>
+  
+  <text x="530" y="248" fill="#8B949E" font-family="Inter, sans-serif" font-size="12">Local Codebases:</text>
+  <text x="690" y="248" fill="#58A6FF" font-family="Inter, sans-serif" font-size="12" font-weight="700">63 Dirs</text>
+
+  <text x="530" y="280" fill="#8B949E" font-family="Inter, sans-serif" font-size="12">GitHub Repositories:</text>
+  <text x="702" y="280" fill="#58A6FF" font-family="Inter, sans-serif" font-size="12" font-weight="700">12</text>
+
+  <text x="530" y="312" fill="#8B949E" font-family="Inter, sans-serif" font-size="12">Config Specifications:</text>
+  <text x="694" y="312" fill="#3FB950" font-family="Inter, sans-serif" font-size="12" font-weight="700">140</text>
+
+  <text x="530" y="344" fill="#8B949E" font-family="Inter, sans-serif" font-size="12">Automated Tests:</text>
+  <text x="700" y="344" fill="#3FB950" font-family="Inter, sans-serif" font-size="12" font-weight="700">90</text>
+
+  <rect x="530" y="370" width="210" height="30" rx="6" fill="#4169E1" fill-opacity="0.15" stroke="#4169E1"/>
+  <text x="552" y="390" fill="#58A6FF" font-family="Inter, sans-serif" font-size="11" font-weight="600">Production Audit Snapshot</text>
+</svg>
+

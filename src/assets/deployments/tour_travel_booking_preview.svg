@@ -1,0 +1,235 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ttBg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#090E17"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="swissGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="amalfiGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="kyotoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#BE185D"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" rx="16" fill="url(#ttBg)"/>
+  <rect x="1" y="1" width="1198" height="673" rx="15" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Browser Header Bar -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H1184C1192.84 0 1200 7.16344 1200 16V46H0V16Z" fill="#1E293B"/>
+  <circle cx="28" cy="23" r="5.5" fill="#EF4444"/>
+  <circle cx="46" cy="23" r="5.5" fill="#F59E0B"/>
+  <circle cx="64" cy="23" r="5.5" fill="#10B981"/>
+  
+  <rect x="180" y="11" width="460" height="24" rx="6" fill="#0F172A" stroke="#334155"/>
+  <circle cx="196" cy="23" r="3" fill="#10B981"/>
+  <text x="208" y="27" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5" font-weight="500">https://wanderlux.travel/packages/explore</text>
+
+  <rect x="1050" y="12" width="125" height="22" rx="11" fill="#0F172A" stroke="#334155"/>
+  <text x="1062" y="27" fill="#60A5FA" font-family="Inter, sans-serif" font-size="10.5" font-weight="600">DJANGO + MYSQL</text>
+
+  <!-- ================= WEBSITE NAV ================= -->
+  <g transform="translate(0, 46)">
+    <rect width="1200" height="54" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    
+    <!-- Brand -->
+    <g transform="translate(40, 14)">
+      <circle cx="13" cy="13" r="13" fill="#2563EB"/>
+      <path d="M8 13C8 10.2386 10.2386 8 13 8C15.7614 8 18 10.2386 18 13M8 13C8 15.7614 10.2386 18 13 18C15.7614 18 18 15.7614 18 13M8 13H18M13 8V18" stroke="#FFFFFF" stroke-width="1.8"/>
+      <text x="36" y="18" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="16" font-weight="800" letter-spacing="-0.02em">WanderLux <tspan fill="#38BDF8">Travels</tspan></text>
+    </g>
+
+    <!-- Nav Links -->
+    <g transform="translate(420, 20)" font-family="Inter, sans-serif" font-size="13" font-weight="500">
+      <text x="0" y="14" fill="#38BDF8" font-weight="700">Explore Packages</text>
+      <text x="140" y="14" fill="#94A3B8">Destinations</text>
+      <text x="260" y="14" fill="#94A3B8">Hotel Bookings</text>
+      <text x="385" y="14" fill="#94A3B8">Flight Combos</text>
+    </g>
+
+    <!-- User / Currency -->
+    <g transform="translate(1010, 14)">
+      <rect width="70" height="26" rx="6" fill="#1E293B"/>
+      <text x="14" y="17" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11" font-weight="600">USD $</text>
+      <rect x="80" y="0" width="80" height="26" rx="6" fill="#2563EB"/>
+      <text x="96" y="17" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="600">My Trips</text>
+    </g>
+  </g>
+
+  <!-- ================= SEARCH & HERO WIDGET ================= -->
+  <g transform="translate(40, 118)">
+    <text x="0" y="24" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="22" font-weight="800">Find &amp; Book Curated Holiday Experiences</text>
+    <text x="0" y="46" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13">Explore handcrafted multi-day itineraries, luxury accommodation &amp; confirmed bookings</text>
+
+    <!-- Search Bar Container -->
+    <g transform="translate(0, 62)">
+      <rect width="1120" height="54" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+      
+      <!-- Field 1: Destination -->
+      <g transform="translate(20, 10)">
+        <text x="0" y="11" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">DESTINATION / REGION</text>
+        <text x="0" y="28" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="13" font-weight="600">Swiss Alps &amp; Interlaken, Switzerland</text>
+      </g>
+      <line x1="340" y1="12" x2="340" y2="42" stroke="#334155"/>
+
+      <!-- Field 2: Dates -->
+      <g transform="translate(365, 10)">
+        <text x="0" y="11" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">TRAVEL DATES</text>
+        <text x="0" y="28" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="13" font-weight="600">Oct 24, 2026 – Oct 31, 2026 (7 Days)</text>
+      </g>
+      <line x1="680" y1="12" x2="680" y2="42" stroke="#334155"/>
+
+      <!-- Field 3: Guests -->
+      <g transform="translate(705, 10)">
+        <text x="0" y="11" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">TRAVELERS</text>
+        <text x="0" y="28" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="13" font-weight="600">2 Adults · 1 Deluxe Room</text>
+      </g>
+
+      <!-- Search CTA Button -->
+      <g transform="translate(970, 8)">
+        <rect width="140" height="38" rx="8" fill="#2563EB"/>
+        <text x="24" y="24" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13" font-weight="700">Search Tours ↗</text>
+      </g>
+    </g>
+
+    <!-- Filter Category Chips -->
+    <g transform="translate(0, 130)">
+      <rect width="130" height="28" rx="14" fill="#2563EB" fill-opacity="0.2" stroke="#2563EB"/>
+      <text x="14" y="18" fill="#60A5FA" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">🏔️ Swiss Alpine (14)</text>
+
+      <g transform="translate(142, 0)">
+        <rect width="140" height="28" rx="14" fill="#1E293B" stroke="#334155"/>
+        <text x="14" y="18" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5">🏖️ Mediterranean (22)</text>
+      </g>
+
+      <g transform="translate(294, 0)">
+        <rect width="140" height="28" rx="14" fill="#1E293B" stroke="#334155"/>
+        <text x="14" y="18" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5">🏛️ Cultural Heritage (18)</text>
+      </g>
+
+      <g transform="translate(446, 0)">
+        <rect width="150" height="28" rx="14" fill="#1E293B" stroke="#334155"/>
+        <text x="14" y="18" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5">🚂 Scenic Rail Journeys (9)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= 3 FEATURED TOUR CARDS ================= -->
+  <g transform="translate(40, 298)">
+    <!-- Card 1: Swiss Alps -->
+    <g transform="translate(0, 0)">
+      <rect width="354" height="340" rx="12" fill="url(#cardGrad)" stroke="#334155"/>
+      
+      <!-- Card Image Visual Frame -->
+      <rect x="0" y="0" width="354" height="150" rx="12" fill="url(#swissGrad)"/>
+      <path d="M0 100L90 40L180 90L270 30L354 80V150H0V100Z" fill="#0F172A" fill-opacity="0.6"/>
+      <path d="M80 50L130 90L210 35L290 85L354 50V150H80V50Z" fill="#1E293B" fill-opacity="0.8"/>
+      
+      <!-- Badges on image -->
+      <rect x="14" y="14" width="95" height="22" rx="4" fill="#10B981"/>
+      <text x="22" y="29" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="700">★ 4.9 (128 REVIEWS)</text>
+
+      <rect x="250" y="14" width="90" height="22" rx="4" fill="#0F172A" fill-opacity="0.85"/>
+      <text x="260" y="29" fill="#38BDF8" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">7D / 6N TOUR</text>
+
+      <!-- Card Body -->
+      <text x="16" y="180" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="15" font-weight="800">Swiss Alps &amp; Glacier Express</text>
+      <text x="16" y="198" fill="#38BDF8" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">Zurich → Interlaken → Zermatt Peak</text>
+
+      <text x="16" y="224" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ 4-Star Alpine Chalet &amp; Spa Included</text>
+      <text x="16" y="242" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ Glacier Express Panoramic Train Pass</text>
+      <text x="16" y="260" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ Professional Alpine Mountain Guide</text>
+
+      <line x1="16" y1="280" x2="338" y2="280" stroke="#334155"/>
+
+      <!-- Footer & Price -->
+      <text x="16" y="304" fill="#64748B" font-family="Inter, sans-serif" font-size="10.5">FROM</text>
+      <text x="16" y="324" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="18" font-weight="800">$1,480 <tspan font-size="11" fill="#94A3B8" font-weight="500">/ person</tspan></text>
+
+      <rect x="238" y="296" width="100" height="32" rx="6" fill="#2563EB"/>
+      <text x="256" y="316" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11.5" font-weight="700">Book Now</text>
+    </g>
+
+    <!-- Card 2: Amalfi Coast -->
+    <g transform="translate(382, 0)">
+      <rect width="354" height="340" rx="12" fill="url(#cardGrad)" stroke="#334155"/>
+      
+      <!-- Card Image Visual Frame -->
+      <rect x="0" y="0" width="354" height="150" rx="12" fill="url(#amalfiGrad)"/>
+      <circle cx="280" cy="50" r="30" fill="#FBBF24" fill-opacity="0.3"/>
+      <path d="M0 120C80 90 160 140 240 100C300 80 340 110 354 100V150H0V120Z" fill="#0F172A" fill-opacity="0.7"/>
+      
+      <!-- Badges on image -->
+      <rect x="14" y="14" width="95" height="22" rx="4" fill="#0284C7"/>
+      <text x="22" y="29" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="700">★ 4.8 (94 REVIEWS)</text>
+
+      <rect x="250" y="14" width="90" height="22" rx="4" fill="#0F172A" fill-opacity="0.85"/>
+      <text x="260" y="29" fill="#2DD4BF" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">6D / 5N TOUR</text>
+
+      <!-- Card Body -->
+      <text x="16" y="180" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="15" font-weight="800">Amalfi Coast &amp; Capri Island</text>
+      <text x="16" y="198" fill="#2DD4BF" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">Naples → Positano → Capri Harbor</text>
+
+      <text x="16" y="224" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ Cliffside Boutique Villa with Sea View</text>
+      <text x="16" y="242" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ Private Catamaran Island Cruise</text>
+      <text x="16" y="260" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ Authentic Italian Culinary Experience</text>
+
+      <line x1="16" y1="280" x2="338" y2="280" stroke="#334155"/>
+
+      <!-- Footer & Price -->
+      <text x="16" y="304" fill="#64748B" font-family="Inter, sans-serif" font-size="10.5">FROM</text>
+      <text x="16" y="324" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="18" font-weight="800">$1,320 <tspan font-size="11" fill="#94A3B8" font-weight="500">/ person</tspan></text>
+
+      <rect x="238" y="296" width="100" height="32" rx="6" fill="#2563EB"/>
+      <text x="256" y="316" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11.5" font-weight="700">Book Now</text>
+    </g>
+
+    <!-- Card 3: Kyoto & Mount Fuji -->
+    <g transform="translate(766, 0)">
+      <rect width="354" height="340" rx="12" fill="url(#cardGrad)" stroke="#334155"/>
+      
+      <!-- Card Image Visual Frame -->
+      <rect x="0" y="0" width="354" height="150" rx="12" fill="url(#kyotoGrad)"/>
+      <path d="M177 30L230 110H124L177 30Z" fill="#F1F5F9" fill-opacity="0.2"/>
+      <path d="M0 110L177 60L354 110V150H0V110Z" fill="#0F172A" fill-opacity="0.8"/>
+      
+      <!-- Badges on image -->
+      <rect x="14" y="14" width="95" height="22" rx="4" fill="#E11D48"/>
+      <text x="22" y="29" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="700">★ 5.0 (210 REVIEWS)</text>
+
+      <rect x="250" y="14" width="90" height="22" rx="4" fill="#0F172A" fill-opacity="0.85"/>
+      <text x="260" y="29" fill="#F472B6" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">8D / 7N TOUR</text>
+
+      <!-- Card Body -->
+      <text x="16" y="180" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="15" font-weight="800">Kyoto Heritage &amp; Mount Fuji</text>
+      <text x="16" y="198" fill="#F472B6" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">Tokyo → Kyoto → Mount Fuji Trail</text>
+
+      <text x="16" y="224" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ Traditional Thermal Onsen Ryokan Stay</text>
+      <text x="16" y="242" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ Shinkansen High-Speed Bullet Pass</text>
+      <text x="16" y="260" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">✓ Ancient Temple &amp; Tea Ceremony Tour</text>
+
+      <line x1="16" y1="280" x2="338" y2="280" stroke="#334155"/>
+
+      <!-- Footer & Price -->
+      <text x="16" y="304" fill="#64748B" font-family="Inter, sans-serif" font-size="10.5">FROM</text>
+      <text x="16" y="324" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="18" font-weight="800">$1,650 <tspan font-size="11" fill="#94A3B8" font-weight="500">/ person</tspan></text>
+
+      <rect x="238" y="296" width="100" height="32" rx="6" fill="#2563EB"/>
+      <text x="256" y="316" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11.5" font-weight="700">Book Now</text>
+    </g>
+  </g>
+</svg>

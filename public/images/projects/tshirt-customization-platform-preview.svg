@@ -1,0 +1,87 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" rx="16" fill="#0D1117"/>
+  <defs>
+    <linearGradient id="tscGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#191B24"/>
+      <stop offset="100%" stop-color="#0D0F16"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#tscGrad)"/>
+  <rect x="1" y="1" width="798" height="448" rx="15" stroke="#333846" stroke-width="1.5"/>
+  
+  <!-- Header Bar -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H784C792.837 0 800 7.16344 800 16V48H0V16Z" fill="#1C1E2A"/>
+  <circle cx="28" cy="24" r="6" fill="#FF5F56"/>
+  <circle cx="48" cy="24" r="6" fill="#FFBD2E"/>
+  <circle cx="68" cy="24" r="6" fill="#27C93F"/>
+  <text x="100" y="29" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="13" font-weight="500">T-Shirt Customization E-Commerce — Interactive Apparel Design Studio</text>
+  <rect x="670" y="14" width="105" height="20" rx="10" fill="#F59E0B" fill-opacity="0.2"/>
+  <text x="686" y="28" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="600">E-COMMERCE</text>
+
+  <!-- Left Main Panel -->
+  <rect x="36" y="68" width="470" height="346" rx="12" fill="#141620" stroke="#333846"/>
+  <text x="56" y="100" fill="#F3F4F6" font-family="Manrope, sans-serif" font-size="17" font-weight="700">In-Browser Design Studio &amp; Print Spec Engine</text>
+  <text x="56" y="122" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">HTML5 2D Canvas coordinate mapping, dynamic color swapping &amp; order specs</text>
+
+  <!-- Feature 1 -->
+  <rect x="56" y="142" width="430" height="48" rx="8" fill="#1B1E2B" stroke="#333846"/>
+  <circle cx="78" cy="166" r="10" fill="#F59E0B" fill-opacity="0.2"/>
+  <text x="74" y="170" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="700">1</text>
+  <text x="98" y="161" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12" font-weight="600">Interactive 2D Canvas Apparel Customizer</text>
+  <text x="98" y="178" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">Real-time color palette switching, graphic positioning &amp; text overlay engine</text>
+
+  <!-- Feature 2 -->
+  <rect x="56" y="200" width="430" height="48" rx="8" fill="#1B1E2B" stroke="#333846"/>
+  <circle cx="78" cy="224" r="10" fill="#3B82F6" fill-opacity="0.2"/>
+  <text x="74" y="228" fill="#60A5FA" font-family="Inter, sans-serif" font-size="11" font-weight="700">2</text>
+  <text x="98" y="219" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12" font-weight="600">High-Resolution Vector Export for Printing</text>
+  <text x="98" y="236" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">Automated coordinate and DPI translation for production printing specs</text>
+
+  <!-- Feature 3 -->
+  <rect x="56" y="258" width="430" height="48" rx="8" fill="#1B1E2B" stroke="#333846"/>
+  <circle cx="78" cy="282" r="10" fill="#10B981" fill-opacity="0.2"/>
+  <text x="74" y="286" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="700">3</text>
+  <text x="98" y="277" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12" font-weight="600">Django Cart &amp; Order Processing Pipeline</text>
+  <text x="98" y="294" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">Dynamic price recalculation based on customization layers and material options</text>
+
+  <!-- Strip -->
+  <rect x="56" y="318" width="430" height="78" rx="8" fill="#1B1E2B" stroke="#D97706" stroke-width="1.2"/>
+  <text x="72" y="342" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="700">FRONTEND INTERACTIVITY &amp; BACKEND SYNCHRONIZATION</text>
+  <text x="72" y="362" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">• Zero page reloads — client-side rendering with asynchronous spec validation</text>
+  <text x="72" y="380" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">• MySQL database schema linking customizable print coordinates to orders</text>
+
+  <!-- Right Panel -->
+  <rect x="522" y="68" width="242" height="346" rx="12" fill="#141620" stroke="#333846"/>
+  <text x="542" y="100" fill="#F3F4F6" font-family="Manrope, sans-serif" font-size="15" font-weight="700">Technology Stack</text>
+
+  <g transform="translate(542, 116)">
+    <rect width="100" height="28" rx="6" fill="#1B1E2B" stroke="#333846"/>
+    <text x="14" y="18" fill="#60A5FA" font-family="Inter, sans-serif" font-size="11" font-weight="600">Python 3.10</text>
+
+    <rect x="110" width="92" height="28" rx="6" fill="#1B1E2B" stroke="#333846"/>
+    <text x="122" y="18" fill="#60A5FA" font-family="Inter, sans-serif" font-size="11" font-weight="600">Django</text>
+
+    <rect y="36" width="100" height="28" rx="6" fill="#1B1E2B" stroke="#333846"/>
+    <text x="12" y="54" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="600">HTML5 Canvas</text>
+
+    <rect x="110" y="36" width="92" height="28" rx="6" fill="#1B1E2B" stroke="#333846"/>
+    <text x="122" y="54" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="600">MySQL</text>
+
+    <rect y="72" width="100" height="28" rx="6" fill="#1B1E2B" stroke="#333846"/>
+    <text x="14" y="90" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="11" font-weight="600">JavaScript</text>
+
+    <rect x="110" y="72" width="92" height="28" rx="6" fill="#1B1E2B" stroke="#333846"/>
+    <text x="126" y="90" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="11" font-weight="600">CSS3</text>
+  </g>
+
+  <!-- Right Metrics Card -->
+  <rect x="542" y="240" width="202" height="156" rx="8" fill="#1B1E2B" stroke="#333846"/>
+  <text x="558" y="266" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">Core Domain:</text>
+  <text x="558" y="284" fill="#F3F4F6" font-family="Manrope, sans-serif" font-size="13" font-weight="700">Custom E-Commerce</text>
+
+  <text x="558" y="312" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">Interactive Layer:</text>
+  <text x="558" y="330" fill="#FBBF24" font-family="Manrope, sans-serif" font-size="13" font-weight="700">HTML5 Vector Canvas</text>
+
+  <text x="558" y="358" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">Backend Engine:</text>
+  <text x="558" y="376" fill="#60A5FA" font-family="Manrope, sans-serif" font-size="13" font-weight="700">Django ORM / Views</text>
+</svg>

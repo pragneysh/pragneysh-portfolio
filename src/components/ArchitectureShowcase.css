@@ -1,0 +1,401 @@
+/* ==========================================================================
+   ARCHITECTURE SHOWCASE SECTION
+   Interactive system diagrams for Workly CRM & AWS Control Center
+   ========================================================================== */
+
+.arch-showcase-section {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+/* System Tabs Switcher */
+.arch-system-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.arch-system-tab {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted, #94a3b8);
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-sm, 8px);
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: all var(--transition, 0.2s ease);
+}
+
+.arch-system-tab:hover {
+  color: var(--white);
+  border-color: var(--accent);
+  background: var(--surface-hover, #1a253c);
+}
+
+.arch-system-tab.active {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
+}
+
+/* Main Container Card */
+.arch-main-card {
+  background: var(--card-bg, #0e1526);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 12px);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md, 0 10px 25px rgba(0, 0, 0, 0.3));
+  position: relative;
+  overflow: hidden;
+}
+
+.arch-main-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2, #34d399), var(--accent));
+}
+
+/* Header */
+.arch-card-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.arch-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.arch-badge {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-transform: uppercase;
+}
+
+.arch-system-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent2, #34d399);
+  font-weight: 600;
+}
+
+.arch-system-heading {
+  font-family: var(--font-head);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.arch-system-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted, #94a3b8);
+  line-height: 1.6;
+  max-width: 860px;
+  margin-bottom: 1.5rem;
+}
+
+/* Metrics Row */
+.arch-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .arch-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.arch-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.arch-metric-val {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.arch-metric-lbl {
+  font-size: 0.72rem;
+  color: var(--text-muted, #94a3b8);
+  margin-top: 2px;
+}
+
+/* Diagram Flow */
+.arch-diagram-flow {
+  margin-bottom: 2.5rem;
+}
+
+.arch-flow-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.arch-layers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.arch-layer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.arch-layer-card {
+  background: var(--surface, #111a2e);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 8px);
+  padding: 1.25rem 1.5rem;
+  transition: all var(--transition, 0.2s ease);
+}
+
+.arch-layer-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Layer Color Themes */
+.layer-blue {
+  border-left: 3px solid #38bdf8;
+}
+.layer-green {
+  border-left: 3px solid #34d399;
+}
+.layer-orange {
+  border-left: 3px solid #fb923c;
+}
+.layer-purple {
+  border-left: 3px solid #a855f7;
+}
+
+.layer-top-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.layer-icon-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.layer-step-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent2, #34d399);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.layer-name {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.layer-summary {
+  font-size: 0.82rem;
+  color: var(--text-muted, #94a3b8);
+  margin-bottom: 1rem;
+}
+
+/* Component Pills */
+.layer-components-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.65rem;
+}
+
+.layer-component-pill {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-name {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.comp-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted, #94a3b8);
+  line-height: 1.35;
+}
+
+/* Connectors */
+.arch-flow-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem 0;
+}
+
+.connector-line-down {
+  width: 2px;
+  height: 12px;
+  background: var(--border);
+}
+
+.connector-text-badge {
+  background: var(--card-bg, #0e1526);
+  border: 1px dashed var(--border);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.15rem 0.65rem;
+  border-radius: 9999px;
+  letter-spacing: 0.03em;
+  margin: 2px 0;
+}
+
+/* Highlights Footer */
+.arch-highlights-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1.75rem;
+}
+
+.highlights-footer-title {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.arch-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .arch-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.arch-highlight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: var(--surface, #111a2e);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted, #94a3b8);
+  line-height: 1.45;
+}
+
+.highlight-check {
+  color: var(--accent2, #34d399);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.arch-cta-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Accessibility Focus States */
+.arch-system-tab:focus-visible,
+.arch-main-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .arch-main-card {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .arch-system-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .arch-system-tab {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .layer-components {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-system-heading {
+    font-size: 1.25rem;
+  }
+
+  .arch-metric-val {
+    font-size: 0.95rem;
+  }
+}
+

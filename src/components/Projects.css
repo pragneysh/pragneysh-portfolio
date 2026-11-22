@@ -1,81 +1,287 @@
-.projects-section { background: var(--bg); border-top: 1px solid var(--border); }
+/* ========================================================
+   PROJECTS SECTION STYLES
+   Unified, compact, image-first portfolio gallery
+   ======================================================== */
 
-.reveal-proj {
-  opacity: 0; transform: translateY(18px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+.projects-section {
+  padding: 4.5rem 1.75rem 4rem;
+  background: var(--bg);
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 80px;
 }
-.reveal-proj.visible { opacity: 1; transform: translateY(0); }
 
-.proj-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 12px; padding: 2rem;
-  position: relative; overflow: hidden;
-  transition: border-color var(--transition), transform var(--transition);
+/* ── Filter Bar ── */
+.projects-filter-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2.25rem;
 }
-.proj-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  opacity: 0; transition: opacity var(--transition);
-}
-.proj-card:hover { border-color: var(--border-hi); transform: translateY(-4px); }
-.proj-card:hover::before { opacity: 1; }
 
-.proj-featured {
-  display: grid; grid-template-columns: 1.2fr 0.8fr;
-  gap: 2.5rem; margin-bottom: 1.25rem;
+.filter-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
 }
+
+.filter-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  user-select: none;
+}
+
+.filter-btn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
+
+.filter-btn.active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.filter-count {
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+/* ── Projects Grid (3 cols desktop, 2 cols tablet, 1 col mobile) ── */
 .projects-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-.proj-num {
-  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 0.75rem;
-}
-.proj-title {
-  font-family: var(--font-head); font-size: 1.1rem;
-  font-weight: 700; color: var(--white);
-  margin-bottom: 0.75rem; letter-spacing: -0.01em;
-}
-.proj-desc {
-  font-size: 0.8rem; color: var(--muted);
-  line-height: 1.85; margin-bottom: 1.25rem;
-}
-.proj-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.stack-tag {
-  font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
-  background: rgba(91,143,255,0.07);
-  border: 1px solid rgba(91,143,255,0.2);
-  border-radius: 3px; color: var(--accent);
-}
-.stack-tag.green {
-  background: rgba(61,255,192,0.06);
-  border-color: rgba(61,255,192,0.2);
-  color: var(--accent2);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-/* Architecture diagram */
-.arch-diagram {
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: 8px; padding: 1.25rem;
-  display: flex; flex-direction: column; gap: 0;
-}
-.arch-label {
-  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 1rem;
-}
-.arch-layer {
-  display: flex; align-items: center; gap: 0.75rem;
-  padding: 0.55rem 0.85rem; border-radius: 5px;
-  font-size: 0.75rem; color: var(--muted);
-}
-.arch-arrow {
-  text-align: center; font-size: 0.65rem;
-  color: var(--border-hi); padding: 0.15rem 0;
+/* ── Project Card ── */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
 }
 
-@media (max-width: 900px) {
-  .proj-featured { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 28px -10px rgba(37, 99, 235, 0.18),
+    0 0 0 1px var(--accent-glow);
+}
+
+/* ── Card Media (16:9 Aspect Ratio) ── */
+.project-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #060913;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-card-img {
+  transform: scale(1.035);
+}
+
+.project-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 10, 20, 0) 65%, rgba(6, 10, 20, 0.3) 100%);
+  pointer-events: none;
+}
+
+.project-category-badge {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #93c5fd;
+  background: rgba(10, 15, 29, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.03em;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+/* ── Card Content Body ── */
+.project-card-body {
+  padding: 1.2rem 1.25rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-family: var(--font-head);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 0.45rem;
+}
+
+.project-title .title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-title .title-link:hover {
+  color: var(--accent);
+}
+
+.project-description {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* ── Subtle Tech Pills (Max 3) ── */
+.project-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border);
+  margin-bottom: 0.8rem;
+}
+
+.tech-pill {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.tech-pill:hover {
+  border-color: var(--accent-glow);
+  color: var(--text);
+}
+
+/* ── Card Footer CTA ── */
+.project-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.project-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.project-card:hover .project-cta-link {
+  color: var(--text);
+  gap: 0.6rem;
+}
+
+/* ── Responsive Breakpoints ── */
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+  }
+
+  .projects-section {
+    padding: 4rem 1.5rem 3.5rem;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .projects-section {
+    padding: 3.5rem 1.15rem 3rem;
+  }
+
+  .projects-filter-bar {
+    margin-top: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .filter-btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.74rem;
+  }
+
+  .project-card-body {
+    padding: 1.1rem 1.1rem 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.05rem;
+  }
+
+  .project-description {
+    font-size: 0.82rem;
+  }
 }

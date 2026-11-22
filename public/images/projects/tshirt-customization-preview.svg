@@ -1,0 +1,267 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tcBg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111520"/>
+      <stop offset="100%" stop-color="#090C14"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#262D3D"/>
+      <stop offset="50%" stop-color="#1B212D"/>
+      <stop offset="100%" stop-color="#111620"/>
+    </linearGradient>
+    <linearGradient id="artGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" rx="16" fill="url(#tcBg)"/>
+  <rect x="1" y="1" width="1198" height="673" rx="15" stroke="#2D3748" stroke-width="1.5"/>
+
+  <!-- Browser Header Bar -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H1184C1192.84 0 1200 7.16344 1200 16V46H0V16Z" fill="#1A202C"/>
+  <circle cx="28" cy="23" r="5.5" fill="#EF4444"/>
+  <circle cx="46" cy="23" r="5.5" fill="#F59E0B"/>
+  <circle cx="64" cy="23" r="5.5" fill="#10B981"/>
+  
+  <rect x="180" y="11" width="460" height="24" rx="6" fill="#0D1117" stroke="#2D3748"/>
+  <circle cx="196" cy="23" r="3" fill="#10B981"/>
+  <text x="208" y="27" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5" font-weight="500">https://threadcraft.studio/customizer/heavyweight-tee</text>
+
+  <rect x="1050" y="12" width="125" height="22" rx="11" fill="#0D1117" stroke="#2D3748"/>
+  <text x="1062" y="27" fill="#F59E0B" font-family="Inter, sans-serif" font-size="10.5" font-weight="600">DJANGO + CANVAS</text>
+
+  <!-- App Header Bar -->
+  <g transform="translate(0, 46)">
+    <rect width="1200" height="54" fill="#131926" stroke="#1E293B" stroke-width="1"/>
+    
+    <!-- Brand -->
+    <g transform="translate(30, 14)">
+      <rect width="26" height="26" rx="6" fill="#F59E0B"/>
+      <text x="5" y="19" font-size="14">👕</text>
+      <text x="36" y="18" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="16" font-weight="800">ThreadCraft <tspan fill="#F59E0B">Studio</tspan></text>
+    </g>
+
+    <!-- Breadcrumb -->
+    <g transform="translate(360, 20)">
+      <text x="0" y="14" fill="#64748B" font-family="Inter, sans-serif" font-size="12">Custom Studio &gt; Men's Apparel &gt; <tspan fill="#F1F5F9" font-weight="600">Heavyweight 240 GSM Tee</tspan></text>
+    </g>
+
+    <!-- Cart Pill -->
+    <g transform="translate(990, 10)">
+      <rect width="170" height="34" rx="8" fill="#2563EB"/>
+      <text x="18" y="22" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">🛒 Cart (1 Item · $34.00)</text>
+    </g>
+  </g>
+
+  <!-- ================= LEFT TOOLBAR ================= -->
+  <g transform="translate(20, 116)">
+    <rect width="64" height="526" rx="12" fill="#131926" stroke="#2D3748"/>
+    
+    <!-- Tool 1: Text -->
+    <g transform="translate(10, 16)">
+      <rect width="44" height="44" rx="8" fill="#2563EB" fill-opacity="0.2" stroke="#2563EB"/>
+      <text x="14" y="28" fill="#60A5FA" font-family="Inter, sans-serif" font-size="16" font-weight="700">T</text>
+      <text x="10" y="38" fill="#60A5FA" font-family="Inter, sans-serif" font-size="8">Text</text>
+    </g>
+
+    <!-- Tool 2: Upload Artwork -->
+    <g transform="translate(10, 72)">
+      <rect width="44" height="44" rx="8" fill="#1E293B"/>
+      <text x="14" y="26" font-size="16">🖼️</text>
+      <text x="6" y="38" fill="#94A3B8" font-family="Inter, sans-serif" font-size="8">Upload</text>
+    </g>
+
+    <!-- Tool 3: Graphics -->
+    <g transform="translate(10, 128)">
+      <rect width="44" height="44" rx="8" fill="#1E293B"/>
+      <text x="14" y="26" font-size="16">🎨</text>
+      <text x="5" y="38" fill="#94A3B8" font-family="Inter, sans-serif" font-size="8">Artwork</text>
+    </g>
+
+    <!-- Tool 4: Layers -->
+    <g transform="translate(10, 184)">
+      <rect width="44" height="44" rx="8" fill="#1E293B"/>
+      <text x="14" y="26" font-size="16">📑</text>
+      <text x="8" y="38" fill="#94A3B8" font-family="Inter, sans-serif" font-size="8">Layers</text>
+    </g>
+
+    <!-- Tool 5: Align & Grid -->
+    <g transform="translate(10, 240)">
+      <rect width="44" height="44" rx="8" fill="#1E293B"/>
+      <text x="14" y="26" font-size="16">📐</text>
+      <text x="8" y="38" fill="#94A3B8" font-family="Inter, sans-serif" font-size="8">Guides</text>
+    </g>
+  </g>
+
+  <!-- ================= CENTER CANVAS ================= -->
+  <g transform="translate(100, 116)">
+    <rect width="680" height="526" rx="12" fill="#0C1019" stroke="#2D3748"/>
+    
+    <!-- Canvas Grid Dots -->
+    <g opacity="0.15" fill="#4169E1">
+      <circle cx="40" cy="40" r="1.5"/><circle cx="120" cy="40" r="1.5"/><circle cx="200" cy="40" r="1.5"/><circle cx="280" cy="40" r="1.5"/><circle cx="360" cy="40" r="1.5"/><circle cx="440" cy="40" r="1.5"/><circle cx="520" cy="40" r="1.5"/><circle cx="600" cy="40" r="1.5"/>
+      <circle cx="40" cy="120" r="1.5"/><circle cx="120" cy="120" r="1.5"/><circle cx="200" cy="120" r="1.5"/><circle cx="280" cy="120" r="1.5"/><circle cx="360" cy="120" r="1.5"/><circle cx="440" cy="120" r="1.5"/><circle cx="520" cy="120" r="1.5"/><circle cx="600" cy="120" r="1.5"/>
+      <circle cx="40" cy="200" r="1.5"/><circle cx="120" cy="200" r="1.5"/><circle cx="200" cy="200" r="1.5"/><circle cx="280" cy="200" r="1.5"/><circle cx="360" cy="200" r="1.5"/><circle cx="440" cy="200" r="1.5"/><circle cx="520" cy="200" r="1.5"/><circle cx="600" cy="200" r="1.5"/>
+      <circle cx="40" cy="280" r="1.5"/><circle cx="120" cy="280" r="1.5"/><circle cx="200" cy="280" r="1.5"/><circle cx="280" cy="280" r="1.5"/><circle cx="360" cy="280" r="1.5"/><circle cx="440" cy="280" r="1.5"/><circle cx="520" cy="280" r="1.5"/><circle cx="600" cy="280" r="1.5"/>
+    </g>
+
+    <!-- REALISTIC 2D T-SHIRT VECTOR MOCKUP -->
+    <g transform="translate(160, 40)">
+      <!-- T-Shirt Body & Sleeves Silhouette -->
+      <path d="M120 18C140 32 220 32 240 18L320 62L278 150L240 134V420H100V134L62 150L20 62L120 18Z" 
+            fill="url(#shirtGrad)" stroke="#384458" stroke-width="2.5"/>
+      
+      <!-- Collar Ribbing -->
+      <path d="M120 18C140 40 220 40 240 18" stroke="#4B5563" stroke-width="4" stroke-linecap="round"/>
+      <path d="M126 19C145 36 215 36 234 19" stroke="#1F2937" stroke-width="2"/>
+      
+      <!-- Crease details -->
+      <path d="M100 134L115 160" stroke="#1F2937" stroke-width="2"/>
+      <path d="M240 134L225 160" stroke="#1F2937" stroke-width="2"/>
+
+      <!-- PRINT BOUNDARY AREA (Dashed cyan box) -->
+      <rect x="110" y="80" width="140" height="200" rx="4" fill="none" stroke="#06B6D4" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.75"/>
+      <text x="116" y="94" fill="#06B6D4" font-family="Inter, sans-serif" font-size="8" font-weight="700">PRINTABLE AREA: 12" × 16"</text>
+
+      <!-- CUSTOM ARTWORK ON TEE WITH SELECTION BOX -->
+      <g transform="translate(122, 108)">
+        <!-- Artwork Badge Design -->
+        <rect width="116" height="135" rx="6" fill="#131722" stroke="#2563EB" stroke-width="1"/>
+        
+        <!-- Mountains graphic inside artwork -->
+        <circle cx="58" cy="50" r="32" fill="url(#artGrad)" fill-opacity="0.85"/>
+        <path d="M30 65L58 35L86 65H30Z" fill="#1E293B"/>
+        <path d="M48 65L68 45L88 65H48Z" fill="#0F172A"/>
+
+        <!-- Typography badge -->
+        <text x="58" y="92" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, sans-serif" font-size="10" font-weight="800" letter-spacing="0.08em">PACIFIC TRAIL</text>
+        <text x="58" y="104" text-anchor="middle" fill="#F59E0B" font-family="Inter, sans-serif" font-size="7.5" font-weight="700">EXPLORE BEYOND · EST. 1994</text>
+        <text x="58" y="118" text-anchor="middle" fill="#94A3B8" font-family="Inter, sans-serif" font-size="6.5">ORIGINAL OUTDOOR APPAREL</text>
+
+        <!-- Selection Handles -->
+        <rect x="-3" y="-3" width="6" height="6" fill="#2563EB"/>
+        <rect x="113" y="-3" width="6" height="6" fill="#2563EB"/>
+        <rect x="-3" y="132" width="6" height="6" fill="#2563EB"/>
+        <rect x="113" y="132" width="6" height="6" fill="#2563EB"/>
+        <circle cx="58" cy="-14" r="3" fill="#2563EB"/>
+        <line x1="58" y1="-14" x2="58" y2="-3" stroke="#2563EB" stroke-width="1.5"/>
+
+        <!-- Coordinates Floating Pill -->
+        <rect x="15" y="142" width="86" height="16" rx="3" fill="#1E293B" stroke="#475569"/>
+        <text x="21" y="153" fill="#94A3B8" font-family="Inter, sans-serif" font-size="7.5">X: 120 · Y: 95 (300 DPI)</text>
+      </g>
+    </g>
+
+    <!-- Bottom View Switcher -->
+    <g transform="translate(210, 480)">
+      <rect width="260" height="32" rx="16" fill="#131926" stroke="#2D3748"/>
+      <rect x="4" y="3" width="76" height="26" rx="13" fill="#2563EB"/>
+      <text x="20" y="20" fill="#FFF" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Front View</text>
+      <text x="96" y="20" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">Back View</text>
+      <text x="175" y="20" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">3D Mockup</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT PANEL: PRODUCT & E-COMMERCE ================= -->
+  <g transform="translate(800, 116)">
+    <rect width="380" height="526" rx="12" fill="#131926" stroke="#2D3748" stroke-width="1.5"/>
+    
+    <!-- Title & Price -->
+    <g transform="translate(24, 24)">
+      <text x="0" y="18" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="17" font-weight="800">Heavyweight Cotton Crewneck</text>
+      <text x="0" y="36" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5">100% Ring-Spun Cotton · 240 GSM Pre-Shrunk</text>
+      
+      <text x="0" y="68" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="24" font-weight="800">$34.00</text>
+      <text x="100" y="64" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700">IN STOCK &amp; READY TO PRINT</text>
+    </g>
+
+    <line x1="24" y1="110" x2="356" y2="110" stroke="#1E293B"/>
+
+    <!-- COLOR SELECTION -->
+    <g transform="translate(24, 126)">
+      <text x="0" y="14" fill="#CBD5E1" font-family="Inter, sans-serif" font-size="11.5" font-weight="700">COLOR: <tspan fill="#60A5FA">VINTAGE CHARCOAL (ACTIVE)</tspan></text>
+      
+      <!-- Color Swatches -->
+      <g transform="translate(0, 26)">
+        <!-- Active Swatch 1: Charcoal -->
+        <circle cx="16" cy="16" r="16" fill="#1E293B" stroke="#2563EB" stroke-width="2.5"/>
+        <circle cx="16" cy="16" r="11" fill="#1F2937"/>
+        <text x="12" y="19" fill="#FFF" font-size="9">✓</text>
+
+        <!-- Swatch 2: Heather Grey -->
+        <circle cx="56" cy="16" r="14" fill="#64748B"/>
+
+        <!-- Swatch 3: Royal Navy -->
+        <circle cx="96" cy="16" r="14" fill="#1E3A8A"/>
+
+        <!-- Swatch 4: Olive Green -->
+        <circle cx="136" cy="16" r="14" fill="#365314"/>
+
+        <!-- Swatch 5: Off-White -->
+        <circle cx="176" cy="16" r="14" fill="#F8FAFC" stroke="#94A3B8"/>
+      </g>
+    </g>
+
+    <!-- SIZE SELECTION -->
+    <g transform="translate(24, 206)">
+      <text x="0" y="14" fill="#CBD5E1" font-family="Inter, sans-serif" font-size="11.5" font-weight="700">SELECT SIZE</text>
+
+      <g transform="translate(0, 26)">
+        <rect width="52" height="32" rx="6" fill="#1E293B" stroke="#334155"/>
+        <text x="21" y="21" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">S</text>
+
+        <g transform="translate(60, 0)">
+          <rect width="52" height="32" rx="6" fill="#1E293B" stroke="#334155"/>
+          <text x="20" y="21" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">M</text>
+        </g>
+
+        <!-- Active Size: L -->
+        <g transform="translate(120, 0)">
+          <rect width="52" height="32" rx="6" fill="#2563EB" stroke="#2563EB"/>
+          <text x="22" y="21" fill="#FFF" font-family="Inter, sans-serif" font-size="11" font-weight="700">L</text>
+        </g>
+
+        <g transform="translate(180, 0)">
+          <rect width="52" height="32" rx="6" fill="#1E293B" stroke="#334155"/>
+          <text x="18" y="21" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">XL</text>
+        </g>
+
+        <g transform="translate(240, 0)">
+          <rect width="52" height="32" rx="6" fill="#1E293B" stroke="#334155"/>
+          <text x="15" y="21" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">2XL</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- PRINT TECHNIQUE SPEC -->
+    <g transform="translate(24, 292)">
+      <rect width="332" height="66" rx="8" fill="#0C1019" stroke="#1E293B"/>
+      <text x="14" y="20" fill="#38BDF8" font-family="Inter, sans-serif" font-size="11" font-weight="700">DIRECT-TO-GARMENT (DTG) PRINTING</text>
+      <text x="14" y="38" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">High-definition water-based pigment inks · Wash-resistant</text>
+      <text x="14" y="52" fill="#10B981" font-family="Inter, sans-serif" font-size="10.5">✓ 300 DPI Vector Spec Output Synced to Django Backend</text>
+    </g>
+
+    <!-- QUANTITY & ADD TO CART CTA -->
+    <g transform="translate(24, 386)">
+      <!-- Quantity Selector -->
+      <rect width="90" height="44" rx="8" fill="#1E293B" stroke="#334155"/>
+      <text x="16" y="27" fill="#94A3B8" font-family="Inter, sans-serif" font-size="16">-</text>
+      <text x="41" y="27" fill="#FFF" font-family="Inter, sans-serif" font-size="13" font-weight="700">1</text>
+      <text x="66" y="27" fill="#94A3B8" font-family="Inter, sans-serif" font-size="16">+</text>
+
+      <!-- Primary CTA -->
+      <g transform="translate(104, 0)">
+        <rect width="228" height="44" rx="8" fill="#2563EB"/>
+        <text x="42" y="27" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13.5" font-weight="700">Add to Cart — $34.00 🛒</text>
+      </g>
+    </g>
+
+    <!-- Shipping guarantee -->
+    <g transform="translate(24, 460)">
+      <text x="0" y="14" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">⚡ Ships in 48 Hours · Free Exchange · MySQL Order Sync</text>
+    </g>
+  </g>
+</svg>

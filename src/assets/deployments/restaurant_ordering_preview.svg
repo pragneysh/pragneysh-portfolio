@@ -1,0 +1,249 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roBg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#090D16"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1F2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="burgerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="50%" stop-color="#9A3412"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+    <linearGradient id="pizzaGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="50%" stop-color="#991B1B"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+    <linearGradient id="pokeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" rx="16" fill="url(#roBg)"/>
+  <rect x="1" y="1" width="1198" height="673" rx="15" stroke="#374151" stroke-width="1.5"/>
+
+  <!-- Browser Header Bar -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H1184C1192.84 0 1200 7.16344 1200 16V46H0V16Z" fill="#1F2937"/>
+  <circle cx="28" cy="23" r="5.5" fill="#EF4444"/>
+  <circle cx="46" cy="23" r="5.5" fill="#F59E0B"/>
+  <circle cx="64" cy="23" r="5.5" fill="#10B981"/>
+  
+  <rect x="180" y="11" width="460" height="24" rx="6" fill="#111827" stroke="#374151"/>
+  <circle cx="196" cy="23" r="3" fill="#10B981"/>
+  <text x="208" y="27" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11.5" font-weight="500">https://order.craftbistro.app/table/07</text>
+
+  <rect x="1050" y="12" width="125" height="22" rx="11" fill="#111827" stroke="#374151"/>
+  <text x="1062" y="27" fill="#F59E0B" font-family="Inter, sans-serif" font-size="10.5" font-weight="600">AWS SERVERLESS</text>
+
+  <!-- App Header Bar -->
+  <g transform="translate(0, 46)">
+    <rect width="1200" height="54" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+    
+    <!-- Restaurant Brand -->
+    <g transform="translate(40, 14)">
+      <circle cx="13" cy="13" r="13" fill="#EA580C"/>
+      <text x="7" y="18" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13">🔥</text>
+      <text x="36" y="18" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Bistro Craft &amp; Grill</text>
+    </g>
+
+    <!-- Table Badge Context -->
+    <g transform="translate(380, 12)">
+      <rect width="210" height="30" rx="15" fill="#1F2937" stroke="#374151"/>
+      <circle cx="18" cy="15" r="4.5" fill="#10B981"/>
+      <text x="30" y="19" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">TABLE #07 · QR VERIFIED</text>
+    </g>
+
+    <!-- Live Tray / Cart -->
+    <g transform="translate(980, 10)">
+      <rect width="180" height="34" rx="8" fill="#2563EB"/>
+      <text x="20" y="22" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12.5" font-weight="700">🛒 Order Tray (3 Items)</text>
+    </g>
+  </g>
+
+  <!-- Category Filter Pills -->
+  <g transform="translate(40, 116)">
+    <rect width="145" height="30" rx="15" fill="#EA580C" fill-opacity="0.2" stroke="#EA580C"/>
+    <text x="16" y="20" fill="#FB923C" font-family="Inter, sans-serif" font-size="12" font-weight="700">🔥 Chef's Signature (6)</text>
+
+    <g transform="translate(155, 0)">
+      <rect width="140" height="30" rx="15" fill="#1F2937" stroke="#374151"/>
+      <text x="16" y="20" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">🍔 Gourmet Burgers</text>
+    </g>
+
+    <g transform="translate(305, 0)">
+      <rect width="130" height="30" rx="15" fill="#1F2937" stroke="#374151"/>
+      <text x="16" y="20" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">🍕 Artisan Pizza</text>
+    </g>
+
+    <g transform="translate(445, 0)">
+      <rect width="130" height="30" rx="15" fill="#1F2937" stroke="#374151"/>
+      <text x="16" y="20" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">🥗 Poke &amp; Greens</text>
+    </g>
+
+    <g transform="translate(585, 0)">
+      <rect width="130" height="30" rx="15" fill="#1F2937" stroke="#374151"/>
+      <text x="16" y="20" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="12">🍹 Craft Drinks</text>
+    </g>
+  </g>
+
+  <!-- ================= MENU GRID (LEFT) ================= -->
+  <g transform="translate(40, 162)">
+    <!-- Food Card 1: Wagyu Burger -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="480" rx="12" fill="url(#cardGrad)" stroke="#374151"/>
+      
+      <!-- Food Graphic Box -->
+      <rect x="0" y="0" width="250" height="150" rx="12" fill="url(#burgerGrad)"/>
+      <circle cx="125" cy="75" r="45" fill="#F97316" fill-opacity="0.25"/>
+      <text x="95" y="90" font-size="52">🍔</text>
+      
+      <rect x="12" y="12" width="90" height="20" rx="4" fill="#EA580C"/>
+      <text x="18" y="26" fill="#FFF" font-family="Inter, sans-serif" font-size="9" font-weight="700">CHEF'S SPECIAL</text>
+
+      <text x="16" y="180" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="14.5" font-weight="800">Smoked Wagyu Burger</text>
+      <text x="16" y="200" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10.5">Brioche, gruyère, black truffle aioli, caramelized onions, smoked bacon</text>
+
+      <g transform="translate(16, 250)">
+        <rect width="70" height="18" rx="4" fill="#374151"/>
+        <text x="8" y="13" fill="#D1D5DB" font-family="Inter, sans-serif" font-size="9.5">620 kcal</text>
+        <rect x="76" width="70" height="18" rx="4" fill="#374151"/>
+        <text x="84" y="13" fill="#D1D5DB" font-family="Inter, sans-serif" font-size="9.5">Gluten-Free</text>
+      </g>
+
+      <line x1="16" y1="410" x2="234" y2="410" stroke="#374151"/>
+      <text x="16" y="445" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="18" font-weight="800">$18.50</text>
+      
+      <rect x="135" y="425" width="100" height="34" rx="6" fill="#2563EB"/>
+      <text x="150" y="446" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">+ Add Order</text>
+    </g>
+
+    <!-- Food Card 2: Burrata Pizza -->
+    <g transform="translate(266, 0)">
+      <rect width="250" height="480" rx="12" fill="url(#cardGrad)" stroke="#374151"/>
+      
+      <!-- Food Graphic Box -->
+      <rect x="0" y="0" width="250" height="150" rx="12" fill="url(#pizzaGrad)"/>
+      <circle cx="125" cy="75" r="45" fill="#DC2626" fill-opacity="0.25"/>
+      <text x="95" y="90" font-size="52">🍕</text>
+      
+      <rect x="12" y="12" width="85" height="20" rx="4" fill="#10B981"/>
+      <text x="18" y="26" fill="#FFF" font-family="Inter, sans-serif" font-size="9" font-weight="700">WOOD-FIRED</text>
+
+      <text x="16" y="180" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="14.5" font-weight="800">Bufala &amp; Basil Pizza</text>
+      <text x="16" y="200" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10.5">San Marzano DOP tomatoes, fresh mozzarella di bufala, organic sweet basil</text>
+
+      <g transform="translate(16, 250)">
+        <rect width="70" height="18" rx="4" fill="#374151"/>
+        <text x="8" y="13" fill="#D1D5DB" font-family="Inter, sans-serif" font-size="9.5">540 kcal</text>
+        <rect x="76" width="70" height="18" rx="4" fill="#374151"/>
+        <text x="84" y="13" fill="#D1D5DB" font-family="Inter, sans-serif" font-size="9.5">Vegetarian</text>
+      </g>
+
+      <line x1="16" y1="410" x2="234" y2="410" stroke="#374151"/>
+      <text x="16" y="445" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="18" font-weight="800">$16.00</text>
+      
+      <rect x="135" y="425" width="100" height="34" rx="6" fill="#2563EB"/>
+      <text x="150" y="446" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">+ Add Order</text>
+    </g>
+
+    <!-- Food Card 3: Salmon Poke Bowl -->
+    <g transform="translate(532, 0)">
+      <rect width="250" height="480" rx="12" fill="url(#cardGrad)" stroke="#374151"/>
+      
+      <!-- Food Graphic Box -->
+      <rect x="0" y="0" width="250" height="150" rx="12" fill="url(#pokeGrad)"/>
+      <circle cx="125" cy="75" r="45" fill="#059669" fill-opacity="0.25"/>
+      <text x="95" y="90" font-size="52">🥗</text>
+      
+      <rect x="12" y="12" width="85" height="20" rx="4" fill="#0284C7"/>
+      <text x="18" y="26" fill="#FFF" font-family="Inter, sans-serif" font-size="9" font-weight="700">FRESH CATCH</text>
+
+      <text x="16" y="180" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="14.5" font-weight="800">Wild Salmon Poke Bowl</text>
+      <text x="16" y="200" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10.5">Sashimi-grade salmon, Haas avocado, edamame, cucumber ribbons, ponzu sesame</text>
+
+      <g transform="translate(16, 250)">
+        <rect width="70" height="18" rx="4" fill="#374151"/>
+        <text x="8" y="13" fill="#D1D5DB" font-family="Inter, sans-serif" font-size="9.5">480 kcal</text>
+        <rect x="76" width="70" height="18" rx="4" fill="#374151"/>
+        <text x="84" y="13" fill="#D1D5DB" font-family="Inter, sans-serif" font-size="9.5">High Protein</text>
+      </g>
+
+      <line x1="16" y1="410" x2="234" y2="410" stroke="#374151"/>
+      <text x="16" y="445" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="18" font-weight="800">$17.50</text>
+      
+      <rect x="135" y="425" width="100" height="34" rx="6" fill="#2563EB"/>
+      <text x="150" y="446" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">+ Add Order</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT PANEL: LIVE KITCHEN QUEUE ================= -->
+  <g transform="translate(838, 162)">
+    <rect width="322" height="480" rx="12" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <text x="20" y="32" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="15" font-weight="800">Live Kitchen Order Queue</text>
+    <text x="20" y="50" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11.5">Order #8429 · Table 07 In-Dining</text>
+
+    <!-- Status Box -->
+    <g transform="translate(20, 68)">
+      <rect width="282" height="64" rx="8" fill="#1F2937" stroke="#F59E0B" stroke-width="1"/>
+      <circle cx="20" cy="24" r="5" fill="#F59E0B"/>
+      <text x="34" y="28" fill="#FBBF24" font-family="Inter, sans-serif" font-size="12" font-weight="700">PREPARING IN KITCHEN</text>
+      <text x="34" y="46" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11">Estimated Delivery: 8–10 Mins</text>
+      <!-- Progress Bar -->
+      <rect x="20" y="56" width="242" height="3" rx="1.5" fill="#374151"/>
+      <rect x="20" y="56" width="165" height="3" rx="1.5" fill="#F59E0B"/>
+    </g>
+
+    <!-- Items List -->
+    <g transform="translate(20, 150)">
+      <text x="0" y="14" fill="#6B7280" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">ORDERED DISHES</text>
+
+      <g transform="translate(0, 26)">
+        <text x="0" y="14" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12" font-weight="600">1x Smoked Wagyu Burger</text>
+        <text x="240" y="14" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12">$18.50</text>
+        <text x="0" y="28" fill="#10B981" font-family="Inter, sans-serif" font-size="10">🍳 Grilling (Station 2)</text>
+      </g>
+
+      <g transform="translate(0, 68)">
+        <text x="0" y="14" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12" font-weight="600">1x Truffle Parmesan Fries</text>
+        <text x="240" y="14" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12">$7.50</text>
+        <text x="0" y="28" fill="#10B981" font-family="Inter, sans-serif" font-size="10">✓ Ready to Serve</text>
+      </g>
+
+      <g transform="translate(0, 110)">
+        <text x="0" y="14" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12" font-weight="600">1x Blood Orange Craft Soda</text>
+        <text x="240" y="14" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="12">$4.50</text>
+        <text x="0" y="28" fill="#10B981" font-family="Inter, sans-serif" font-size="10">✓ Poured &amp; Placed</text>
+      </g>
+    </g>
+
+    <!-- Subtotal Breakdown -->
+    <g transform="translate(20, 320)">
+      <line x1="0" y1="0" x2="282" y2="0" stroke="#374151"/>
+      <text x="0" y="24" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11.5">Subtotal</text>
+      <text x="245" y="24" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="11.5">$30.50</text>
+      <text x="0" y="44" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="11.5">GST &amp; Service (5%)</text>
+      <text x="250" y="44" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="11.5">$1.52</text>
+      
+      <text x="0" y="70" fill="#F9FAFB" font-family="Manrope, sans-serif" font-size="15" font-weight="800">Total Payable</text>
+      <text x="235" y="70" fill="#38BDF8" font-family="Manrope, sans-serif" font-size="16" font-weight="800">$32.02</text>
+    </g>
+
+    <!-- Waiter / Bill Buttons -->
+    <g transform="translate(20, 420)">
+      <rect width="134" height="36" rx="6" fill="#1F2937" stroke="#374151"/>
+      <text x="18" y="22" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">Call Waiter</text>
+
+      <rect x="148" y="0" width="134" height="36" rx="6" fill="#10B981"/>
+      <text x="175" y="22" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11.5" font-weight="700">Pay Bill 💳</text>
+    </g>
+  </g>
+</svg>

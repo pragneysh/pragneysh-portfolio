@@ -1,0 +1,238 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="asBg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B131C"/>
+      <stop offset="100%" stop-color="#060A10"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#13202E"/>
+      <stop offset="100%" stop-color="#0A1118"/>
+    </linearGradient>
+    <linearGradient id="greenGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" rx="16" fill="url(#asBg)"/>
+  <rect x="1" y="1" width="1198" height="673" rx="15" stroke="#1E3246" stroke-width="1.5"/>
+
+  <!-- Browser Header Bar -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H1184C1192.84 0 1200 7.16344 1200 16V46H0V16Z" fill="#111D2A"/>
+  <circle cx="28" cy="23" r="5.5" fill="#EF4444"/>
+  <circle cx="46" cy="23" r="5.5" fill="#F59E0B"/>
+  <circle cx="64" cy="23" r="5.5" fill="#10B981"/>
+  
+  <rect x="180" y="11" width="460" height="24" rx="6" fill="#0A121A" stroke="#1E3246"/>
+  <circle cx="196" cy="23" r="3" fill="#10B981"/>
+  <text x="208" y="27" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5" font-weight="500">https://auth.enterpriseguard.io/security/iam</text>
+
+  <rect x="1030" y="12" width="145" height="22" rx="11" fill="#0A121A" stroke="#1E3246"/>
+  <text x="1042" y="27" fill="#34D399" font-family="Inter, sans-serif" font-size="10.5" font-weight="600">JWT + MFA SHIELDED</text>
+
+  <!-- App Header Bar -->
+  <g transform="translate(0, 46)">
+    <rect width="1200" height="54" fill="#0F1A26" stroke="#1E3246" stroke-width="1"/>
+    
+    <!-- Brand -->
+    <g transform="translate(30, 14)">
+      <rect width="26" height="26" rx="6" fill="#059669"/>
+      <text x="5" y="19" font-size="14">🛡️</text>
+      <text x="36" y="18" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="16" font-weight="800">AuthGuard <tspan fill="#34D399">Enterprise</tspan></text>
+    </g>
+
+    <!-- Context Status -->
+    <g transform="translate(420, 13)">
+      <rect width="260" height="28" rx="14" fill="#13202E" stroke="#10B981" stroke-width="1"/>
+      <circle cx="16" cy="14" r="4" fill="#10B981"/>
+      <text x="28" y="18" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="700">ZERO-TRUST ACCESS CONTROL ACTIVE</text>
+    </g>
+
+    <!-- Admin profile -->
+    <g transform="translate(1010, 12)">
+      <rect width="160" height="30" rx="6" fill="#13202E" stroke="#1E3246"/>
+      <circle cx="18" cy="15" r="10" fill="#2563EB"/>
+      <text x="14" y="18" fill="#FFF" font-family="Inter, sans-serif" font-size="9" font-weight="700">PD</text>
+      <text x="36" y="19" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11" font-weight="600">Superadmin Role</text>
+    </g>
+  </g>
+
+  <!-- ================= TOP METRIC TILES ================= -->
+  <g transform="translate(30, 116)">
+    <!-- Metric 1: Active Sessions -->
+    <rect width="270" height="74" rx="10" fill="url(#cardGrad)" stroke="#1E3246"/>
+    <text x="18" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">ACTIVE AUTH SESSIONS</text>
+    <text x="18" y="52" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="24" font-weight="800">1,420</text>
+    <rect x="180" y="16" width="76" height="20" rx="10" fill="#10B981" fill-opacity="0.15"/>
+    <text x="188" y="30" fill="#34D399" font-family="Inter, sans-serif" font-size="10" font-weight="600">0 Breaches</text>
+
+    <!-- Metric 2: MFA Enrollment -->
+    <g transform="translate(290, 0)">
+      <rect width="270" height="74" rx="10" fill="url(#cardGrad)" stroke="#1E3246"/>
+      <text x="18" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">MFA TWO-STEP ADOPTION</text>
+      <text x="18" y="52" fill="#34D399" font-family="Manrope, sans-serif" font-size="24" font-weight="800">98.4%</text>
+      <text x="150" y="50" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">TOTP + FIDO2</text>
+    </g>
+
+    <!-- Metric 3: Brute-Force Blocked -->
+    <g transform="translate(580, 0)">
+      <rect width="270" height="74" rx="10" fill="url(#cardGrad)" stroke="#1E3246"/>
+      <text x="18" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">BRUTE-FORCE MITIGATION</text>
+      <text x="18" y="52" fill="#38BDF8" font-family="Manrope, sans-serif" font-size="24" font-weight="800">100% Protected</text>
+      <text x="180" y="50" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Rate-Limited</text>
+    </g>
+
+    <!-- Metric 4: Token Signature -->
+    <g transform="translate(870, 0)">
+      <rect width="270" height="74" rx="10" fill="url(#cardGrad)" stroke="#1E3246"/>
+      <text x="18" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">TOKEN CRYPTOGRAPHY</text>
+      <text x="18" y="52" fill="#A78BFA" font-family="Manrope, sans-serif" font-size="24" font-weight="800">RS256 JWT</text>
+      <text x="185" y="50" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Auto-Rotate</text>
+    </g>
+  </g>
+
+  <!-- ================= LEFT PANEL: USER MFA & SECURITY SETTINGS ================= -->
+  <g transform="translate(30, 206)">
+    <rect width="560" height="442" rx="12" fill="url(#cardGrad)" stroke="#1E3246"/>
+    
+    <text x="24" y="34" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Identity Security &amp; Access Controls</text>
+    <text x="24" y="52" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5">Configure authentication factors, asymmetric token signing &amp; role restrictions</text>
+
+    <!-- User Identity Card -->
+    <g transform="translate(24, 70)">
+      <rect width="512" height="60" rx="8" fill="#0C1520" stroke="#1E3246"/>
+      <circle cx="30" cy="30" r="16" fill="#2563EB"/>
+      <text x="24" y="35" fill="#FFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">PD</text>
+      <text x="56" y="26" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="13" font-weight="700">Pragneysh Dekate <tspan fill="#34D399" font-size="11">(Verified Admin)</tspan></text>
+      <text x="56" y="44" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">Last login: 14 mins ago · 103.21.244.x (Ahmedabad, IN) · Session Active</text>
+      
+      <rect x="420" y="18" width="76" height="24" rx="4" fill="#059669" fill-opacity="0.2"/>
+      <text x="432" y="34" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="700">SUPERUSER</text>
+    </g>
+
+    <!-- Setting 1: TOTP Multi-Factor -->
+    <g transform="translate(24, 146)">
+      <rect width="512" height="60" rx="8" fill="#0E1A26" stroke="#10B981" stroke-width="1.2"/>
+      <circle cx="28" cy="30" r="12" fill="#10B981" fill-opacity="0.2"/>
+      <text x="22" y="34" font-size="12">🔑</text>
+      <text x="50" y="26" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="12.5" font-weight="700">Two-Step Multi-Factor Authentication (TOTP)</text>
+      <text x="50" y="44" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">Time-based 6-digit cryptographic challenge via Authenticator app &amp; YubiKey</text>
+
+      <!-- Toggle Switch Active -->
+      <rect x="446" y="18" width="50" height="24" rx="12" fill="#10B981"/>
+      <circle cx="482" cy="30" r="9" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Setting 2: Stateless JWT Session -->
+    <g transform="translate(24, 218)">
+      <rect width="512" height="60" rx="8" fill="#0C1520" stroke="#1E3246"/>
+      <circle cx="28" cy="30" r="12" fill="#3B82F6" fill-opacity="0.2"/>
+      <text x="22" y="34" font-size="12">📜</text>
+      <text x="50" y="26" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="12.5" font-weight="700">JWT Token Lifecycle &amp; Rotation Engine</text>
+      <text x="50" y="44" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">15-minute access token lifespan with automatic refresh token rotation &amp; revocation</text>
+
+      <!-- Toggle Switch Active -->
+      <rect x="446" y="18" width="50" height="24" rx="12" fill="#2563EB"/>
+      <circle cx="482" cy="30" r="9" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Setting 3: Rate Limiter & Brute-Force Shield -->
+    <g transform="translate(24, 290)">
+      <rect width="512" height="60" rx="8" fill="#0C1520" stroke="#1E3246"/>
+      <circle cx="28" cy="30" r="12" fill="#F59E0B" fill-opacity="0.2"/>
+      <text x="22" y="34" font-size="12">🛡️</text>
+      <text x="50" y="26" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="12.5" font-weight="700">Brute-Force Rate Limiting &amp; IP Cooldown</text>
+      <text x="50" y="44" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">5 failed attempts trigger 15-minute IP lockdown and tamper alarm dispatch</text>
+
+      <!-- Toggle Switch Active -->
+      <rect x="446" y="18" width="50" height="24" rx="12" fill="#10B981"/>
+      <circle cx="482" cy="30" r="9" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Footer Spec -->
+    <g transform="translate(24, 365)">
+      <rect width="512" height="52" rx="8" fill="#091018" stroke="#1E3246"/>
+      <text x="16" y="22" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓ Security Architecture Compliance:</text>
+      <text x="16" y="40" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10.5">OWASP Top 10 Hardened · PBKDF2 Password Hashing · HttpOnly Cookie Transport</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT PANEL: REAL-TIME AUDIT LOG ================= -->
+  <g transform="translate(610, 206)">
+    <rect width="560" height="442" rx="12" fill="url(#cardGrad)" stroke="#1E3246"/>
+    
+    <text x="24" y="34" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Security Audit Stream &amp; Access Log</text>
+    <text x="24" y="52" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5">Live immutable verification event stream for forensic &amp; compliance tracking</text>
+
+    <!-- Table Header -->
+    <g transform="translate(24, 70)">
+      <rect width="512" height="28" rx="4" fill="#0A121A"/>
+      <text x="14" y="18" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">TIMESTAMP</text>
+      <text x="110" y="18" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">IDENTITY / USER</text>
+      <text x="230" y="18" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">EVENT TYPE</text>
+      <text x="370" y="18" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">STATUS</text>
+    </g>
+
+    <!-- Log Row 1 -->
+    <g transform="translate(24, 110)">
+      <line x1="0" y1="44" x2="512" y2="44" stroke="#162636"/>
+      <text x="14" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">01:24:18</text>
+      <text x="110" y="24" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">p.dekate (Admin)</text>
+      <text x="230" y="24" fill="#38BDF8" font-family="Inter, sans-serif" font-size="11">TOTP 2-Step Challenge</text>
+      
+      <rect x="370" y="10" width="85" height="20" rx="10" fill="#10B981" fill-opacity="0.15"/>
+      <text x="382" y="24" fill="#34D399" font-family="Inter, sans-serif" font-size="10" font-weight="700">200 VERIFIED</text>
+    </g>
+
+    <!-- Log Row 2 -->
+    <g transform="translate(24, 162)">
+      <line x1="0" y1="44" x2="512" y2="44" stroke="#162636"/>
+      <text x="14" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">01:21:05</text>
+      <text x="110" y="24" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">api-service-sync</text>
+      <text x="230" y="24" fill="#A78BFA" font-family="Inter, sans-serif" font-size="11">JWT Refresh Rotated</text>
+      
+      <rect x="370" y="10" width="85" height="20" rx="10" fill="#10B981" fill-opacity="0.15"/>
+      <text x="382" y="24" fill="#34D399" font-family="Inter, sans-serif" font-size="10" font-weight="700">200 SUCCESS</text>
+    </g>
+
+    <!-- Log Row 3: Blocked Brute Force -->
+    <g transform="translate(24, 214)">
+      <line x1="0" y1="44" x2="512" y2="44" stroke="#162636"/>
+      <text x="14" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">01:18:42</text>
+      <text x="110" y="24" fill="#F87171" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">anon_attacker</text>
+      <text x="230" y="24" fill="#F87171" font-family="Inter, sans-serif" font-size="11">Brute-Force Probe</text>
+      
+      <rect x="370" y="10" width="85" height="20" rx="10" fill="#EF4444" fill-opacity="0.2"/>
+      <text x="380" y="24" fill="#F87171" font-family="Inter, sans-serif" font-size="10" font-weight="700">429 BLOCKED</text>
+    </g>
+
+    <!-- Log Row 4: OAuth SSO -->
+    <g transform="translate(24, 266)">
+      <line x1="0" y1="44" x2="512" y2="44" stroke="#162636"/>
+      <text x="14" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">01:14:30</text>
+      <text x="110" y="24" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">sarah.chen</text>
+      <text x="230" y="24" fill="#38BDF8" font-family="Inter, sans-serif" font-size="11">OAuth2 Google SSO</text>
+      
+      <rect x="370" y="10" width="85" height="20" rx="10" fill="#10B981" fill-opacity="0.15"/>
+      <text x="382" y="24" fill="#34D399" font-family="Inter, sans-serif" font-size="10" font-weight="700">200 SUCCESS</text>
+    </g>
+
+    <!-- Log Row 5: Role Escalation Block -->
+    <g transform="translate(24, 318)">
+      <text x="14" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">01:09:12</text>
+      <text x="110" y="24" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">devon.cross</text>
+      <text x="230" y="24" fill="#F59E0B" font-family="Inter, sans-serif" font-size="11">RBAC Role Check</text>
+      
+      <rect x="370" y="10" width="85" height="20" rx="10" fill="#10B981" fill-opacity="0.15"/>
+      <text x="382" y="24" fill="#34D399" font-family="Inter, sans-serif" font-size="10" font-weight="700">200 VERIFIED</text>
+    </g>
+
+    <!-- Bottom summary -->
+    <g transform="translate(24, 375)">
+      <rect width="512" height="42" rx="6" fill="#091018" stroke="#1E3246"/>
+      <text x="16" y="26" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="600">✓ Security Ingest Pipeline Active:</text>
+      <text x="200" y="26" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">Streaming tamper-resistant logs into AWS CloudWatch</text>
+    </g>
+  </g>
+</svg>

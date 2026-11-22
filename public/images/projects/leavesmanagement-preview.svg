@@ -1,0 +1,379 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lmBg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0E131F"/>
+      <stop offset="100%" stop-color="#080C14"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#182030"/>
+      <stop offset="100%" stop-color="#121824"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-5" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="675" rx="16" fill="url(#lmBg)"/>
+  <rect x="1" y="1" width="1198" height="673" rx="15" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Browser Header Bar -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H1184C1192.84 0 1200 7.16344 1200 16V46H0V16Z" fill="#131B2A"/>
+  <circle cx="28" cy="23" r="5.5" fill="#EF4444"/>
+  <circle cx="46" cy="23" r="5.5" fill="#F59E0B"/>
+  <circle cx="64" cy="23" r="5.5" fill="#10B981"/>
+  
+  <!-- URL Bar -->
+  <rect x="180" y="11" width="460" height="24" rx="6" fill="#0B1019" stroke="#1E293B"/>
+  <circle cx="196" cy="23" r="3" fill="#10B981"/>
+  <text x="208" y="27" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11.5" font-weight="500">https://app.staffleave.cloud/admin/dashboard</text>
+  
+  <rect x="1070" y="12" width="105" height="22" rx="11" fill="#1E293B"/>
+  <text x="1084" y="27" fill="#38BDF8" font-family="Inter, sans-serif" font-size="10.5" font-weight="600">LIVE INSTANCE</text>
+
+  <!-- ================= SIDEBAR ================= -->
+  <rect x="0" y="46" width="200" height="629" fill="#0F1624" stroke="#1E293B" stroke-width="1"/>
+  
+  <!-- App Brand -->
+  <g transform="translate(20, 68)">
+    <rect width="28" height="28" rx="7" fill="url(#blueGlow)"/>
+    <path d="M8 14L12 18L20 10" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="36" y="19" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="15" font-weight="800" letter-spacing="-0.02em">StaffLeave</text>
+  </g>
+
+  <!-- Sidebar Nav Links -->
+  <g transform="translate(14, 120)">
+    <!-- Active Item: Dashboard -->
+    <rect width="172" height="36" rx="8" fill="#2563EB" fill-opacity="0.2" stroke="#2563EB" stroke-width="1"/>
+    <text x="36" y="23" fill="#60A5FA" font-family="Inter, sans-serif" font-size="12.5" font-weight="600">Dashboard</text>
+    <circle cx="22" cy="18" r="4" fill="#3B82F6"/>
+
+    <!-- Nav Items -->
+    <g transform="translate(0, 44)">
+      <rect width="172" height="34" rx="8" fill="transparent"/>
+      <text x="36" y="22" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" font-weight="500">Leave Requests</text>
+      <circle cx="22" cy="17" r="4" fill="#64748B"/>
+      <rect x="142" y="8" width="18" height="18" rx="9" fill="#F59E0B" fill-opacity="0.2"/>
+      <text x="147" y="21" fill="#FBBF24" font-family="Inter, sans-serif" font-size="10" font-weight="700">5</text>
+    </g>
+
+    <g transform="translate(0, 84)">
+      <rect width="172" height="34" rx="8" fill="transparent"/>
+      <text x="36" y="22" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" font-weight="500">Employees (148)</text>
+      <circle cx="22" cy="17" r="4" fill="#64748B"/>
+    </g>
+
+    <g transform="translate(0, 124)">
+      <rect width="172" height="34" rx="8" fill="transparent"/>
+      <text x="36" y="22" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" font-weight="500">Department Calendar</text>
+      <circle cx="22" cy="17" r="4" fill="#64748B"/>
+    </g>
+
+    <g transform="translate(0, 164)">
+      <rect width="172" height="34" rx="8" fill="transparent"/>
+      <text x="36" y="22" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" font-weight="500">Monthly Reports</text>
+      <circle cx="22" cy="17" r="4" fill="#64748B"/>
+    </g>
+
+    <g transform="translate(0, 204)">
+      <rect width="172" height="34" rx="8" fill="transparent"/>
+      <text x="36" y="22" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" font-weight="500">Approval Policies</text>
+      <circle cx="22" cy="17" r="4" fill="#64748B"/>
+    </g>
+  </g>
+
+  <!-- User Profile In Sidebar -->
+  <g transform="translate(14, 605)">
+    <rect width="172" height="50" rx="8" fill="#131B2A" stroke="#1E293B"/>
+    <circle cx="28" cy="25" r="14" fill="#3B82F6"/>
+    <text x="24" y="29" fill="#FFFFFF" font-family="Manrope, sans-serif" font-size="11" font-weight="700">PD</text>
+    <text x="48" y="22" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="11" font-weight="600">Pragneysh (Admin)</text>
+    <text x="48" y="36" fill="#64748B" font-family="Inter, sans-serif" font-size="9.5">HR Executive</text>
+  </g>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <!-- Top Bar -->
+  <g transform="translate(225, 66)">
+    <text x="0" y="22" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="20" font-weight="800">Leave Approvals &amp; Attendance Dashboard</text>
+    <text x="0" y="42" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12">October 2026 · Real-Time Workforce Schedule &amp; Multi-Tier Review Chain</text>
+
+    <!-- Quick Action Button -->
+    <rect x="535" y="10" width="130" height="32" rx="8" fill="#2563EB"/>
+    <text x="552" y="30" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11.5" font-weight="600">+ New Request</text>
+  </g>
+
+  <!-- 3 Top Metric Cards -->
+  <g transform="translate(225, 126)">
+    <!-- Metric 1: Total Employees -->
+    <rect width="215" height="74" rx="10" fill="url(#cardGrad)" stroke="#1E293B"/>
+    <text x="18" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">TOTAL HEADCOUNT</text>
+    <text x="18" y="52" fill="#F8FAFC" font-family="Manrope, sans-serif" font-size="24" font-weight="800">148</text>
+    <rect x="145" y="16" width="56" height="20" rx="10" fill="#10B981" fill-opacity="0.15"/>
+    <text x="153" y="30" fill="#34D399" font-family="Inter, sans-serif" font-size="10" font-weight="600">100% Synced</text>
+
+    <!-- Metric 2: On Leave Today -->
+    <g transform="translate(228, 0)">
+      <rect width="215" height="74" rx="10" fill="url(#cardGrad)" stroke="#1E293B"/>
+      <text x="18" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11" font-weight="600">ON LEAVE TODAY</text>
+      <text x="18" y="52" fill="#38BDF8" font-family="Manrope, sans-serif" font-size="24" font-weight="800">8 Staff</text>
+      <text x="135" y="50" fill="#64748B" font-family="Inter, sans-serif" font-size="11">5.4% Out</text>
+    </g>
+
+    <!-- Metric 3: Pending Approvals -->
+    <g transform="translate(456, 0)">
+      <rect width="210" height="74" rx="10" fill="url(#cardGrad)" stroke="#F59E0B" stroke-opacity="0.4"/>
+      <text x="18" y="24" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="700">PENDING ACTION</text>
+      <text x="18" y="52" fill="#F59E0B" font-family="Manrope, sans-serif" font-size="24" font-weight="800">5 Requests</text>
+      <circle cx="180" cy="37" r="10" fill="#F59E0B" fill-opacity="0.2"/>
+      <path d="M180 32V38M180 41V42" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Leave Requests Data Table -->
+  <g transform="translate(225, 218)">
+    <rect width="666" height="435" rx="12" fill="url(#cardGrad)" stroke="#1E293B"/>
+    
+    <!-- Table Header -->
+    <text x="20" y="32" fill="#F1F5F9" font-family="Manrope, sans-serif" font-size="14" font-weight="700">Recent Employee Requests</text>
+    <rect x="546" y="16" width="100" height="24" rx="6" fill="#0F172A" stroke="#1E293B"/>
+    <text x="560" y="32" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">Filter: All (5)</text>
+
+    <!-- Table Column Titles -->
+    <g transform="translate(20, 52)">
+      <rect width="626" height="26" fill="#101826" rx="4"/>
+      <text x="12" y="17" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">EMPLOYEE</text>
+      <text x="160" y="17" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">LEAVE TYPE</text>
+      <text x="270" y="17" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">DURATION</text>
+      <text x="390" y="17" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">DAYS</text>
+      <text x="445" y="17" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">STATUS</text>
+      <text x="545" y="17" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">ACTION</text>
+    </g>
+
+    <!-- Row 1 -->
+    <g transform="translate(20, 86)">
+      <line x1="0" y1="52" x2="626" y2="52" stroke="#1E293B"/>
+      <circle cx="22" cy="24" r="14" fill="#3B82F6"/>
+      <text x="14" y="28" fill="#FFF" font-family="Inter, sans-serif" font-size="11" font-weight="700">AM</text>
+      <text x="44" y="21" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="12" font-weight="600">Alex Morgan</text>
+      <text x="44" y="35" fill="#64748B" font-family="Inter, sans-serif" font-size="10">Frontend Engineer</text>
+      
+      <rect x="160" y="15" width="85" height="20" rx="4" fill="#3B82F6" fill-opacity="0.12"/>
+      <text x="168" y="29" fill="#60A5FA" font-family="Inter, sans-serif" font-size="10" font-weight="600">Annual Leave</text>
+      
+      <text x="270" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11">Oct 24 – Oct 28</text>
+      <text x="395" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11" font-weight="600">5 Days</text>
+      
+      <rect x="445" y="15" width="80" height="20" rx="10" fill="#F59E0B" fill-opacity="0.15"/>
+      <text x="453" y="29" fill="#FBBF24" font-family="Inter, sans-serif" font-size="9.5" font-weight="600">Pending Review</text>
+
+      <rect x="545" y="14" width="34" height="22" rx="4" fill="#10B981" fill-opacity="0.2"/>
+      <text x="552" y="29" fill="#34D399" font-family="Inter, sans-serif" font-size="10" font-weight="700">✓</text>
+      <rect x="585" y="14" width="34" height="22" rx="4" fill="#EF4444" fill-opacity="0.2"/>
+      <text x="594" y="29" fill="#F87171" font-family="Inter, sans-serif" font-size="10" font-weight="700">✕</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(20, 146)">
+      <line x1="0" y1="52" x2="626" y2="52" stroke="#1E293B"/>
+      <circle cx="22" cy="24" r="14" fill="#8B5CF6"/>
+      <text x="16" y="28" fill="#FFF" font-family="Inter, sans-serif" font-size="11" font-weight="700">SC</text>
+      <text x="44" y="21" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="12" font-weight="600">Sarah Chen</text>
+      <text x="44" y="35" fill="#64748B" font-family="Inter, sans-serif" font-size="10">Cloud Lead</text>
+      
+      <rect x="160" y="15" width="95" height="20" rx="4" fill="#8B5CF6" fill-opacity="0.12"/>
+      <text x="168" y="29" fill="#C084FC" font-family="Inter, sans-serif" font-size="10" font-weight="600">AWS Summit</text>
+      
+      <text x="270" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11">Nov 02 – Nov 04</text>
+      <text x="395" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11" font-weight="600">3 Days</text>
+      
+      <rect x="445" y="15" width="80" height="20" rx="10" fill="#10B981" fill-opacity="0.15"/>
+      <text x="457" y="29" fill="#34D399" font-family="Inter, sans-serif" font-size="9.5" font-weight="600">Approved</text>
+
+      <rect x="545" y="14" width="74" height="22" rx="4" fill="#1E293B"/>
+      <text x="556" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="600">Details</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(20, 206)">
+      <line x1="0" y1="52" x2="626" y2="52" stroke="#1E293B"/>
+      <circle cx="22" cy="24" r="14" fill="#10B981"/>
+      <text x="14" y="28" fill="#FFF" font-family="Inter, sans-serif" font-size="11" font-weight="700">DM</text>
+      <text x="44" y="21" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="12" font-weight="600">David Miller</text>
+      <text x="44" y="35" fill="#64748B" font-family="Inter, sans-serif" font-size="10">DevOps Engineer</text>
+      
+      <rect x="160" y="15" width="85" height="20" rx="4" fill="#EC4899" fill-opacity="0.12"/>
+      <text x="168" y="29" fill="#F472B6" font-family="Inter, sans-serif" font-size="10" font-weight="600">Sick Leave</text>
+      
+      <text x="270" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11">Oct 22 – Oct 23</text>
+      <text x="395" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11" font-weight="600">2 Days</text>
+      
+      <rect x="445" y="15" width="80" height="20" rx="10" fill="#F59E0B" fill-opacity="0.15"/>
+      <text x="453" y="29" fill="#FBBF24" font-family="Inter, sans-serif" font-size="9.5" font-weight="600">Pending Review</text>
+
+      <rect x="545" y="14" width="34" height="22" rx="4" fill="#10B981" fill-opacity="0.2"/>
+      <text x="552" y="29" fill="#34D399" font-family="Inter, sans-serif" font-size="10" font-weight="700">✓</text>
+      <rect x="585" y="14" width="34" height="22" rx="4" fill="#EF4444" fill-opacity="0.2"/>
+      <text x="594" y="29" fill="#F87171" font-family="Inter, sans-serif" font-size="10" font-weight="700">✕</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(20, 266)">
+      <line x1="0" y1="52" x2="626" y2="52" stroke="#1E293B"/>
+      <circle cx="22" cy="24" r="14" fill="#F59E0B"/>
+      <text x="16" y="28" fill="#FFF" font-family="Inter, sans-serif" font-size="11" font-weight="700">PS</text>
+      <text x="44" y="21" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="12" font-weight="600">Priya Sharma</text>
+      <text x="44" y="35" fill="#64748B" font-family="Inter, sans-serif" font-size="10">Backend Architect</text>
+      
+      <rect x="160" y="15" width="85" height="20" rx="4" fill="#3B82F6" fill-opacity="0.12"/>
+      <text x="168" y="29" fill="#60A5FA" font-family="Inter, sans-serif" font-size="10" font-weight="600">Parental Leave</text>
+      
+      <text x="270" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11">Nov 10 – Dec 15</text>
+      <text x="395" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="11" font-weight="600">25 Days</text>
+      
+      <rect x="445" y="15" width="80" height="20" rx="10" fill="#3B82F6" fill-opacity="0.15"/>
+      <text x="460" y="29" fill="#60A5FA" font-family="Inter, sans-serif" font-size="9.5" font-weight="600">In Review</text>
+
+      <rect x="545" y="14" width="74" height="22" rx="4" fill="#1E293B"/>
+      <text x="556" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="600">Details</text>
+    </g>
+
+    <!-- Audit Footer -->
+    <g transform="translate(20, 385)">
+      <rect width="626" height="34" rx="6" fill="#0C131F" stroke="#1E293B"/>
+      <text x="14" y="21" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="600">✓ AWS Serverless Audit Log:</text>
+      <text x="175" y="21" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">Multi-level approval transitions replicated across DynamoDB point-in-time recovery</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT PANEL ================= -->
+  <!-- Mini Calendar & Balances -->
+  <g transform="translate(908, 126)">
+    <!-- Calendar Card -->
+    <rect width="270" height="280" rx="12" fill="url(#cardGrad)" stroke="#1E293B"/>
+    <text x="18" y="28" fill="#F1F5F9" font-family="Manrope, sans-serif" font-size="13" font-weight="700">October 2026 Schedule</text>
+    
+    <!-- Weekdays -->
+    <g transform="translate(18, 48)">
+      <text x="8" y="10" fill="#64748B" font-family="Inter, sans-serif" font-size="10">M</text>
+      <text x="42" y="10" fill="#64748B" font-family="Inter, sans-serif" font-size="10">T</text>
+      <text x="76" y="10" fill="#64748B" font-family="Inter, sans-serif" font-size="10">W</text>
+      <text x="110" y="10" fill="#64748B" font-family="Inter, sans-serif" font-size="10">T</text>
+      <text x="144" y="10" fill="#64748B" font-family="Inter, sans-serif" font-size="10">F</text>
+      <text x="178" y="10" fill="#64748B" font-family="Inter, sans-serif" font-size="10">S</text>
+      <text x="212" y="10" fill="#64748B" font-family="Inter, sans-serif" font-size="10">S</text>
+    </g>
+
+    <!-- Calendar Grid Rows -->
+    <g transform="translate(18, 75)" font-family="Inter, sans-serif" font-size="11" fill="#CBD5E1">
+      <!-- Row 1 -->
+      <text x="8" y="12" fill="#475569">28</text>
+      <text x="42" y="12" fill="#475569">29</text>
+      <text x="76" y="12" fill="#475569">30</text>
+      <text x="110" y="12">1</text>
+      <text x="144" y="12">2</text>
+      <text x="178" y="12">3</text>
+      <text x="212" y="12">4</text>
+
+      <!-- Row 2 -->
+      <text x="8" y="38">5</text>
+      <text x="42" y="38">6</text>
+      <text x="76" y="38">7</text>
+      <text x="110" y="38">8</text>
+      <text x="144" y="38">9</text>
+      <text x="178" y="38">10</text>
+      <text x="212" y="38">11</text>
+
+      <!-- Row 3 -->
+      <text x="8" y="64">12</text>
+      <text x="42" y="64">13</text>
+      <text x="76" y="64">14</text>
+      <text x="110" y="64">15</text>
+      <text x="144" y="64">16</text>
+      <text x="178" y="64">17</text>
+      <text x="212" y="64">18</text>
+
+      <!-- Row 4 (Leaves Highlighted) -->
+      <text x="8" y="90">19</text>
+      <text x="42" y="90">20</text>
+      <text x="76" y="90">21</text>
+      
+      <!-- Highlighted Oct 22 (Medical Leave) -->
+      <circle cx="114" cy="86" r="12" fill="#EC4899" fill-opacity="0.25"/>
+      <text x="108" y="90" fill="#F472B6" font-weight="700">22</text>
+
+      <!-- Highlighted Oct 23 -->
+      <circle cx="148" cy="86" r="12" fill="#EC4899" fill-opacity="0.25"/>
+      <text x="142" y="90" fill="#F472B6" font-weight="700">23</text>
+
+      <text x="178" y="90">24</text>
+      <text x="212" y="90">25</text>
+
+      <!-- Row 5 (Vacation Highlighted) -->
+      <circle cx="12" cy="116" r="12" fill="#3B82F6" fill-opacity="0.25"/>
+      <text x="6" y="120" fill="#60A5FA" font-weight="700">26</text>
+
+      <circle cx="46" cy="116" r="12" fill="#3B82F6" fill-opacity="0.25"/>
+      <text x="40" y="120" fill="#60A5FA" font-weight="700">27</text>
+
+      <circle cx="80" cy="116" r="12" fill="#3B82F6" fill-opacity="0.25"/>
+      <text x="74" y="120" fill="#60A5FA" font-weight="700">28</text>
+
+      <text x="110" y="120">29</text>
+      <text x="144" y="120">30</text>
+      <text x="178" y="120">31</text>
+      <text x="212" y="120" fill="#475569">1</text>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(18, 240)">
+      <circle cx="6" cy="6" r="4" fill="#3B82F6"/>
+      <text x="16" y="9" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">Vacation</text>
+
+      <circle cx="80" cy="6" r="4" fill="#EC4899"/>
+      <text x="90" y="9" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">Medical</text>
+
+      <circle cx="150" cy="6" r="4" fill="#F59E0B"/>
+      <text x="160" y="9" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">Pending</text>
+    </g>
+
+    <!-- Department Balances Card -->
+    <g transform="translate(0, 296)">
+      <rect width="270" height="230" rx="12" fill="url(#cardGrad)" stroke="#1E293B"/>
+      <text x="18" y="28" fill="#F1F5F9" font-family="Manrope, sans-serif" font-size="13" font-weight="700">Leave Balance Reserves</text>
+
+      <!-- Balance 1 -->
+      <g transform="translate(18, 44)">
+        <text x="0" y="12" fill="#CBD5E1" font-family="Inter, sans-serif" font-size="11.5">Annual Paid Time Off</text>
+        <text x="190" y="12" fill="#60A5FA" font-family="Inter, sans-serif" font-size="11" font-weight="700">18 / 24 Days</text>
+        <rect y="20" width="234" height="6" rx="3" fill="#1E293B"/>
+        <rect y="20" width="175" height="6" rx="3" fill="#3B82F6"/>
+      </g>
+
+      <!-- Balance 2 -->
+      <g transform="translate(18, 88)">
+        <text x="0" y="12" fill="#CBD5E1" font-family="Inter, sans-serif" font-size="11.5">Sick &amp; Wellness</text>
+        <text x="190" y="12" fill="#34D399" font-family="Inter, sans-serif" font-size="11" font-weight="700">10 / 12 Days</text>
+        <rect y="20" width="234" height="6" rx="3" fill="#1E293B"/>
+        <rect y="20" width="195" height="6" rx="3" fill="#10B981"/>
+      </g>
+
+      <!-- Balance 3 -->
+      <g transform="translate(18, 132)">
+        <text x="0" y="12" fill="#CBD5E1" font-family="Inter, sans-serif" font-size="11.5">Floating &amp; Cultural Holidays</text>
+        <text x="196" y="12" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="700">2 / 3 Days</text>
+        <rect y="20" width="234" height="6" rx="3" fill="#1E293B"/>
+        <rect y="20" width="156" height="6" rx="3" fill="#F59E0B"/>
+      </g>
+
+      <!-- Tech Pill in Corner -->
+      <g transform="translate(18, 178)">
+        <rect width="234" height="34" rx="6" fill="#131B2A" stroke="#1E293B"/>
+        <text x="12" y="21" fill="#38BDF8" font-family="Inter, sans-serif" font-size="10.5" font-weight="600">⚡ AWS Lambda + NestJS Microservices</text>
+      </g>
+    </g>
+  </g>
+</svg>
