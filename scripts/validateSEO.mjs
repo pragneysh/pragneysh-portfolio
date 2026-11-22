@@ -103,14 +103,20 @@ async function run() {
         const ogTitle = document.querySelector('meta[property="og:title"]')?.content;
         const ogDesc = document.querySelector('meta[property="og:description"]')?.content;
         const ogUrl = document.querySelector('meta[property="og:url"]')?.content;
+        const ogImage = document.querySelector('meta[property="og:image"]')?.content;
+        const ogImageWidth = document.querySelector('meta[property="og:image:width"]')?.content;
+        const ogImageHeight = document.querySelector('meta[property="og:image:height"]')?.content;
+        const ogImageType = document.querySelector('meta[property="og:image:type"]')?.content;
+        const twCard = document.querySelector('meta[name="twitter:card"]')?.content;
         const twTitle = document.querySelector('meta[name="twitter:title"]')?.content;
-        const h1s = Array.from(document.querySelectorAll('h1')).map(h => h.textContent.replace(/\\s+/g, ' ').trim());
+        const twImage = document.querySelector('meta[name="twitter:image"]')?.content;
+        const h1s = Array.from(document.querySelectorAll('h1')).map(h => h.textContent.replace(/\s+/g, ' ').trim());
         const scripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map(s => {
           try { return JSON.parse(s.textContent); } catch (e) { return null; }
         });
         const imagesWithoutAlt = Array.from(document.querySelectorAll('img')).filter(i => !i.alt || i.alt.trim() === '').map(i => i.src);
         return {
-          title, desc, canonical, ogTitle, ogDesc, ogUrl, twTitle, h1s, scripts, imagesWithoutAlt
+          title, desc, canonical, ogTitle, ogDesc, ogUrl, ogImage, ogImageWidth, ogImageHeight, ogImageType, twCard, twTitle, twImage, h1s, scripts, imagesWithoutAlt
         };
       })()
     `);
@@ -118,6 +124,10 @@ async function run() {
     console.log('Homepage Title:', hpSEO.title);
     console.log('Homepage Canonical:', hpSEO.canonical);
     console.log('Homepage Meta Description:', hpSEO.desc);
+    console.log('OG Image:', hpSEO.ogImage);
+    console.log('OG Image Width:', hpSEO.ogImageWidth, '| Height:', hpSEO.ogImageHeight, '| Type:', hpSEO.ogImageType);
+    console.log('Twitter Card:', hpSEO.twCard);
+    console.log('Twitter Image:', hpSEO.twImage);
     console.log('H1 Headings found (count: ' + hpSEO.h1s.length + '):', hpSEO.h1s);
     console.log('Images without alt text:', hpSEO.imagesWithoutAlt.length);
 
@@ -213,7 +223,7 @@ async function run() {
     const canonicalsSet = new Set(caseResults.map(c => c.canonical));
     console.log('\n--- Duplicate Check across Case Studies ---');
     console.log(`Unique Titles: ${titlesSet.size} / 9 (Expected 9) -> ${titlesSet.size === 9 ? 'PASSED' : 'FAILED'}`);
-    console.log(`Unique Canonicals: ${cancals => canonicalsSet.size} / 9 (Expected 9) -> ${canonicalsSet.size === 9 ? 'PASSED' : 'FAILED'}`);
+    console.log(`Unique Canonicals: ${canonicalsSet.size} / 9 (Expected 9) -> ${canonicalsSet.size === 9 ? 'PASSED' : 'FAILED'}`);
 
     // -------------------------------------------------------------
     // Test 4: Sitemap & Robots Validation
@@ -227,6 +237,37 @@ async function run() {
     sitemapUrls.forEach(u => console.log('  ' + u));
 
     console.log('\nRobots.txt content:\n' + robotsContent.trim());
+
+    // -------------------------------------------------------------
+    // Test 5: Social Preview OG Image Asset Check
+    // -------------------------------------------------------------
+    console.log('\n=== 6. Validating Social Sharing Image (public/og-image.png) ===');
+    const ogBuf = fs.readFileSync('public/og-image.png');
+    const isPng = ogBuf.slice(0, 8).toString('hex') === '89504e470d0a1a0a';
+    const width = ogBuf.readUInt32BE(16);
+    const height = ogBuf.readUInt32BE(20);
+    console.log(`Format: PNG (${isPng ? 'PASSED' : 'FAILED'}) | Dimensions: ${width}x${height} (${width === 1200 && height === 630 ? 'PASSED' : 'FAILED'}) | Size: ${ogBuf.length} bytes`);
+
+    // -------------------------------------------------------------
+    // Test 6: Static index.html Social Tag Uniqueness Check
+    // -------------------------------------------------------------
+    console.log('\n=== 7. Checking index.html Social Tag Uniqueness ===');
+    const indexHtml = fs.readFileSync('index.html', 'utf8');
+    const socialTags = [
+      'og:title', 'og:description', 'og:type', 'og:url', 'og:image',
+      'og:image:width', 'og:image:height', 'og:image:type',
+      'twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'
+    ];
+    let tagUniquenessPassed = true;
+    for (const tag of socialTags) {
+      const regex = new RegExp('(?:property|name)="' + tag + '"', 'gi');
+      const count = (indexHtml.match(regex) || []).length;
+      if (count !== 1) {
+        console.error(`TAG INTEGRITY FAILED: ${tag} count is ${count} (expected exactly 1)`);
+        tagUniquenessPassed = false;
+      }
+    }
+    console.log(`Static social tags verification: ${tagUniquenessPassed ? 'PASSED (All 12 unique)' : 'FAILED'}`);
 
     console.log('\n=== ALL SEO AUDIT AND VERIFICATION CHECKS COMPLETED ===');
   } catch (err) {

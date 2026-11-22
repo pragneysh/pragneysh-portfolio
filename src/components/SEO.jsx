@@ -11,7 +11,7 @@ export default function SEO({
   description = "Portfolio of Pragneysh Dekate (Pragnesh), Full-Stack Developer & Cloud Engineer in Ahmedabad, Gujarat. Building scalable web applications, Python & Django backends, React interfaces, and AWS cloud systems.",
   canonical,
   ogType = "website",
-  ogImage = "https://pragneyshdekate.in/logo512.png",
+  ogImage = "https://pragneyshdekate.in/og-image.png",
   schema = null,
 }) {
   const location = useLocation();
@@ -60,6 +60,9 @@ export default function SEO({
     setMetaTag("property", "og:title", title);
     setMetaTag("property", "og:description", description);
     setMetaTag("property", "og:image", ogImage);
+    setMetaTag("property", "og:image:width", "1200");
+    setMetaTag("property", "og:image:height", "630");
+    setMetaTag("property", "og:image:type", "image/png");
     setMetaTag("property", "og:site_name", "Pragneysh Dekate Portfolio");
 
     // 5. Twitter Card
