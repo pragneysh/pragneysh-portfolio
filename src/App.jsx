@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import SEO from "./components/SEO";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -45,18 +46,25 @@ function ScrollManager() {
 
 function HomePage() {
   return (
-    <main id="main-content" tabIndex="-1">
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <LiveProjects />
-      <Projects />
-      <Achievements />
-      <Education />
-      <Certifications />
-      <Contact />
-    </main>
+    <>
+      <SEO
+        title="Pragneysh Dekate | Full-Stack Developer, Python & AWS"
+        description="Portfolio of Pragneysh Dekate (Pragnesh), Full-Stack Developer & Cloud Engineer in Ahmedabad, Gujarat. Building scalable web applications, Python & Django backends, React interfaces, and AWS cloud systems."
+        canonical="https://pragneyshdekate.in/"
+      />
+      <main id="main-content" tabIndex="-1">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <LiveProjects />
+        <Projects />
+        <Achievements />
+        <Education />
+        <Certifications />
+        <Contact />
+      </main>
+    </>
   );
 }
 

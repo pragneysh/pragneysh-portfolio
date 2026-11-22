@@ -48,6 +48,23 @@
   transform: translateX(-2px);
 }
 
+.showcase-breadcrumb-trail {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.825rem;
+}
+
+.breadcrumb-divider {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.breadcrumb-current {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* --------------------------------------------------------------------------
    2. Page Header / Hero Section (Compact)
    -------------------------------------------------------------------------- */

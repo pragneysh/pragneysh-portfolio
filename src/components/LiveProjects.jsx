@@ -61,8 +61,10 @@ export default function LiveProjects() {
               <div className="live-media-wrapper">
                 <img
                   src={proj.image}
-                  alt={`${proj.title} production screenshot`}
+                  alt={`${proj.title} production website deployed on cloud by Pragneysh Dekate`}
                   className="live-image"
+                  width="600"
+                  height="340"
                   loading="lazy"
                 />
 

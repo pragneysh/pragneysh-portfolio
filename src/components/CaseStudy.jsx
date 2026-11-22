@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import SEO from "./SEO";
 import { projects } from "../data";
 import { PROJECT_PLAIN_INFO } from "./Projects";
 import {
@@ -65,14 +66,74 @@ export default function CaseStudy() {
   const nextProject = projects[(currentIndex + 1) % projects.length];
   const plainInfo = PROJECT_PLAIN_INFO[project.slug] || PROJECT_PLAIN_INFO[project.id];
 
+  const metaTitle = `${project.title} — Case Study | Pragneysh Dekate`;
+  const metaDescription = plainInfo?.simpleDesc || project.description || `Case study and full-stack cloud architecture for ${project.title} engineered by Pragneysh Dekate.`;
+  const canonicalUrl = `https://pragneyshdekate.in/projects/${project.slug}`;
+
+  const caseSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pragneyshdekate.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://pragneyshdekate.in/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": project.title,
+            "item": canonicalUrl
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${canonicalUrl}#software`,
+        "name": project.title,
+        "applicationCategory": plainInfo?.categoryLabel || project.category || "DeveloperApplication",
+        "operatingSystem": "Web, Cloud",
+        "description": metaDescription,
+        "url": canonicalUrl,
+        "author": {
+          "@id": "https://pragneyshdekate.in/#person"
+        }
+      }
+    ]
+  };
+
   return (
     <article className="case-study-page">
+      <SEO
+        title={metaTitle}
+        description={metaDescription}
+        canonical={canonicalUrl}
+        ogType="article"
+        schema={caseSchema}
+      />
       {/* Top Header / Breadcrumb navigation */}
-      <div className="case-study-header-bar">
+      <nav className="case-study-header-bar" aria-label="Breadcrumb">
         <div className="case-study-container">
-          <Link to="/#projects" className="back-link">
-            <ArrowLeft size={16} /> Back to Projects
-          </Link>
+          <div className="case-study-breadcrumbs">
+            <Link to="/" className="back-link">
+              <span>Home</span>
+            </Link>
+            <span className="breadcrumb-sep">/</span>
+            <Link to="/#projects" className="back-link">
+              <span>Projects</span>
+            </Link>
+            <span className="breadcrumb-sep">/</span>
+            <span className="breadcrumb-active" aria-current="page">{project.title}</span>
+          </div>
           <div className="header-meta-tags">
             <span className="case-study-badge">{project.category}</span>
             {project.visibility === "private" ? (
@@ -86,7 +147,7 @@ export default function CaseStudy() {
             )}
           </div>
         </div>
-      </div>
+      </nav>
 
       {/* Hero Header */}
       <header className="case-study-hero">
@@ -146,8 +207,10 @@ export default function CaseStudy() {
             <div className="case-study-banner">
               <img
                 src={project.image}
-                alt={project.title}
+                alt={`${project.title} - Architectural and engineering case study preview by Pragneysh Dekate`}
                 className="case-study-featured-img"
+                width="1200"
+                height="675"
                 loading="eager"
               />
               <div className="banner-caption">
@@ -344,7 +407,14 @@ export default function CaseStudy() {
                 <div className="gallery-grid">
                   {project.screenshots.map((s, idx) => (
                     <div key={idx} className="gallery-item">
-                      <img src={s.url} alt={s.label} className="gallery-img" loading="lazy" />
+                      <img
+                        src={s.url}
+                        alt={`${project.title} - ${s.label} screenshot`}
+                        className="gallery-img"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                      />
                       <div className="gallery-footer">
                         <span className="gallery-label">{s.label}</span>
                         <span className={`gallery-type-badge type-${s.type}`}>

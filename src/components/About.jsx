@@ -50,7 +50,7 @@ export default function About() {
           <div className="about-narrative reveal">
             <div className="about-bio-text">
               <p className="bio-paragraph highlight-lead">
-                I'm a <strong>Full-Stack Developer</strong> focused on building scalable web applications and cloud-native systems.
+                I'm <strong>Pragneysh Dekate</strong> (often known as <strong>Pragnesh</strong>), a <strong>Full-Stack Developer</strong> and Cloud Engineer based in Ahmedabad, Gujarat, focused on building scalable web applications and cloud-native systems.
               </p>
               <p className="bio-paragraph">
                 My core expertise is in <strong>Python, Django, React</strong> and backend development, complemented by hands-on experience designing, deploying and managing applications on <strong>AWS</strong>.

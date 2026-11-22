@@ -59,6 +59,14 @@
 
 /* Title & Name */
 .hero-title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-title-greeting {
+  display: block;
   font-family: var(--font-head);
   font-size: clamp(3.2rem, 5.8vw, 5.4rem);
   font-weight: 800;
@@ -80,6 +88,7 @@
 }
 
 .hero-headline {
+  display: block;
   font-family: var(--font-head);
   font-size: clamp(1.05rem, 2.1vw, 1.35rem);
   font-weight: 600;

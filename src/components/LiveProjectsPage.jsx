@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from "./SEO";
 import { liveProjects, profile } from "../data";
 import {
   ArrowLeft,
@@ -46,6 +47,39 @@ function getCategoryEyebrow(category) {
   return category.toUpperCase();
 }
 
+const liveProjectsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pragneyshdekate.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Client Websites & Live Deployments",
+          "item": "https://pragneyshdekate.in/live-projects"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://pragneyshdekate.in/live-projects#webpage",
+      "url": "https://pragneyshdekate.in/live-projects",
+      "name": "Client Websites & Live Deployments | Pragneysh Dekate",
+      "description": "Production websites and commercial web platforms designed, developed, and deployed on AWS by Pragneysh Dekate for clients and businesses.",
+      "isPartOf": {
+        "@id": "https://pragneyshdekate.in/#website"
+      }
+    }
+  ]
+};
+
 export default function LiveProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -63,13 +97,21 @@ export default function LiveProjectsPage() {
 
   return (
     <main id="main-content" className="showcase-page-root" tabIndex="-1">
+      <SEO
+        title="Client Websites & Live Deployments | Pragneysh Dekate"
+        description="Explore production websites, business platforms, and web applications designed, developed, and deployed on AWS by Pragneysh Dekate for clients and commercial businesses."
+        canonical="https://pragneyshdekate.in/live-projects"
+        schema={liveProjectsSchema}
+      />
       {/* Top Breadcrumb Nav */}
-      <nav className="showcase-nav-bar" aria-label="Breadcrumb navigation">
-        <div className="showcase-container">
+      <nav className="showcase-nav-bar" aria-label="Breadcrumb">
+        <div className="showcase-container showcase-breadcrumb-trail">
           <Link to="/" className="showcase-back-link">
-            <ArrowLeft size={16} />
-            <span>Return to Home</span>
+            <ArrowLeft size={14} />
+            <span>Home</span>
           </Link>
+          <span className="breadcrumb-divider">/</span>
+          <span className="breadcrumb-current" aria-current="page">Client Websites &amp; Live Deployments</span>
         </div>
       </nav>
 
@@ -129,8 +171,10 @@ export default function LiveProjectsPage() {
                   <div className="showcase-media-frame">
                     <img
                       src={proj.image}
-                      alt={`${proj.title} production website homepage preview`}
+                      alt={`${proj.title} production website homepage preview by Pragneysh Dekate`}
                       className="showcase-img"
+                      width="600"
+                      height="340"
                       loading="lazy"
                     />
                     <div className="showcase-live-pill">

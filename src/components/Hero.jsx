@@ -47,14 +47,14 @@ export default function Hero() {
             <span className="hero-badge-text">{profile.status}</span>
           </div>
 
-          {/* Name & Greeting */}
+          {/* Main Headline & Identity */}
           <h1 className="hero-title">
-            <span className="hero-name-first">Hi, I'm</span>{' '}
-            <em className="hero-name-last">{profile.fullName}</em>
+            <span className="hero-title-greeting">
+              <span className="hero-name-first">Hi, I'm</span>{' '}
+              <em className="hero-name-last">{profile.fullName}</em>
+            </span>
+            <span className="hero-headline">{profile.headline}</span>
           </h1>
-
-          {/* Main Headline */}
-          <h2 className="hero-headline">{profile.headline}</h2>
 
           {/* Focus Area Rotator */}
           <div className="hero-role-wrapper">
@@ -145,8 +145,10 @@ export default function Hero() {
               <div className="avatar-frame">
                 <img
                   src={profile.avatar}
-                  alt="Pragneysh Dekate"
+                  alt="Pragneysh Dekate - Full-Stack Developer & Cloud Engineer"
                   className="avatar-img"
+                  width="72"
+                  height="72"
                   onError={e => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement.classList.add('avatar-fallback');
@@ -156,7 +158,7 @@ export default function Hero() {
               </div>
 
               <div className="profile-identity">
-                <h2 className="identity-name">{profile.fullName}</h2>
+                <div className="identity-name">{profile.fullName}</div>
                 <p className="identity-title">{profile.role}</p>
                 <div className="identity-pills">
                   <span className="tag-pill">Python &amp; Django</span>

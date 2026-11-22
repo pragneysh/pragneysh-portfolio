@@ -67,8 +67,10 @@ export default function FeaturedProjects() {
               <div className="featured-showcase-media">
                 <img
                   src={project.image}
-                  alt={`${project.cleanTitle} preview`}
+                  alt={`${project.cleanTitle} - ${project.categoryLabel} architecture preview by Pragneysh Dekate`}
                   className="featured-showcase-img"
+                  width="600"
+                  height="338"
                   loading="lazy"
                 />
                 <div className="featured-showcase-overlay" />

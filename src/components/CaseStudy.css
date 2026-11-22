@@ -49,6 +49,24 @@
   transform: translateX(-3px);
 }
 
+.case-study-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.case-study-breadcrumbs .breadcrumb-sep {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.case-study-breadcrumbs .breadcrumb-active {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .header-meta-tags {
   display: inline-flex;
   align-items: center;

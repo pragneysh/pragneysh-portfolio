@@ -200,8 +200,10 @@ export default function Projects() {
                   {proj.image ? (
                     <img
                       src={proj.image}
-                      alt={`${proj.title} preview`}
+                      alt={`${proj.title} - ${info.categoryLabel} architecture project by Pragneysh Dekate`}
                       className="project-card-img"
+                      width="600"
+                      height="338"
                       loading="lazy"
                     />
                   ) : (
