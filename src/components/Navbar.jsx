@@ -14,11 +14,13 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
 
-  // Default to light theme as requested, persist in localStorage
+  // Default to dark theme, read stored preference if explicitly set by user
   const [theme, setTheme] = useState(() => {
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark' || stored === 'light') return stored;
-    return 'light';
+    try {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'light' || stored === 'dark') return stored;
+    } catch (e) {}
+    return 'dark';
   });
 
   // Primary vs Secondary links
@@ -69,11 +71,21 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location.pathname]);
 
-  // Sync theme attribute on document root & localStorage
+  // Sync theme attribute on document root
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
   }, [theme]);
+
+  // Sync across browser tabs if user changes theme in another tab
+  useEffect(() => {
+    const handleStorage = (e) => {
+      if (e.key === 'theme' && (e.newValue === 'light' || e.newValue === 'dark')) {
+        setTheme(e.newValue);
+      }
+    };
+    window.addEventListener('storage', handleStorage);
+    return () => window.removeEventListener('storage', handleStorage);
+  }, []);
 
   // Close dropdown on click outside or Escape
   useEffect(() => {
@@ -111,7 +123,13 @@ export default function Navbar() {
   }, [menuOpen]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    setTheme((prev) => {
+      const next = prev === 'light' ? 'dark' : 'light';
+      try {
+        localStorage.setItem('theme', next);
+      } catch (e) {}
+      return next;
+    });
   };
 
   const handleNav = (e, id, item) => {

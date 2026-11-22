@@ -1,7 +1,7 @@
 /* ========================================================
    PRAGNEYSH DEKATE — PORTFOLIO V2 STYLESHEET
    Design Tokens, Typography, Dark/Light Themes, Global Utilities
-   Default Theme: Light (#FFFFFF) with Royal Blue (#4169E1) & Dark Charcoal (#171923)
+   Default Theme: Dark Charcoal (#171923) with Royal Blue (#4169E1)
    ======================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -95,6 +95,7 @@
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
   --bg: #171923;               /* Dark charcoal background */
   --bg-secondary: #12141c;
   --surface: #1e212d;
